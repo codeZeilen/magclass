@@ -14,7 +14,7 @@
 #' they are simply added, resulting in e.g. `c("A.d1", "B.d2")`.
 #'
 #' @return The extended MAgPIE object
-#' @author Jan Philipp Dietrich, Benjamin Bodirsky
+#' @author Jan Philipp Dietrich, Benjamin Bodirsky, Pascal Sauer
 #' @seealso \code{\link{add_columns}},\code{\link{mbind}}
 #' @examples
 #'
