@@ -62,14 +62,14 @@ Another function which recieved a deprecation warning is `write.report2`. So far
 
 ## New feature: extended sub-dimension support
 
-So far `dimSums`, `add_columns`, `add_dimension` were only functioning for the sub-dimensions in the third dimension while `getCPR` were only functioning for the first dimension. All these functions have been completely rewritten and work now for all sub-dimensions and are able to address a dimension either by its `dimCode` or set name:
+So far `dimSums`, `add_columns`, `addDim` were only functioning for the sub-dimensions in the third dimension while `getCPR` were only functioning for the first dimension. All these functions have been completely rewritten and work now for all sub-dimensions and are able to address a dimension either by its `dimCode` or set name:
 
 ```{r, echo = TRUE}
 dimSums(a, c("x", "y", "cell", "day", "month", "species", "color"))
 
 getCPR(a, 3.2)
 
-add_dimension(p[, 1, 1], 1.2)
+addDim(p[, 1, 1], 1.2)
 
 add_columns(p[, 1, 1], dim = "i")
 ```
@@ -88,7 +88,7 @@ For applications this means that the behavior of code reading/writing these file
 
 ## One-stop-shop-function getItems
 
-As indicated earlier `getItems` can be used to replace `fulldim` and `getRegionList`. But its functionality goes beyond it making it the function to be used when elements of (sub-)dimensions should be read, added, removed or modified. While so far many different functions had to be remembered for these applications (such as `getCells`, `getNames`, `add_dimensions`) it is now recommended to first look at `getItems`. In the following some examples of its functionality:
+As indicated earlier `getItems` can be used to replace `fulldim` and `getRegionList`. But its functionality goes beyond it making it the function to be used when elements of (sub-)dimensions should be read, added, removed or modified. While so far many different functions had to be remembered for these applications (such as `getCells`, `getNames`, `addDim`) it is now recommended to first look at `getItems`. In the following some examples of its functionality:
 
 Returning a sub-dimension:
 

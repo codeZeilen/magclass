@@ -24,10 +24,10 @@ library(magclass)
 
 # creating a magpie object with 2 regions, 2 years and 2 different values
 m <- new.magpie(cells_and_regions = c("AFR", "CPA"),
-  years = c(1995, 2000),
-  names = c("bla", "blub"),
-  sets = c("region", "year", "value"),
-  fill = 0)
+                years = c(1995, 2000),
+                names = c("bla", "blub"),
+                sets = c("region", "year", "value"),
+                fill = 0)
 print(m)
 
 # converting a simple vector with one value per region to a magpie object

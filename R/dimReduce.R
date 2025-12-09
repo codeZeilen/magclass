@@ -7,7 +7,7 @@
 #' @param dim_exclude Vector with names of dimensions which must not be reduced
 #' @return The reduced MAgPIE object
 #' @author Jan Philipp Dietrich
-#' @seealso \code{\link{add_dimension}}
+#' @seealso \code{\link{addDim}}
 #' @note This function has some similarities to \code{\link{collapseDim}}, but
 #' serves a different purpose. While \code{\link{collapseDim}} only removes
 #' dimensions which contain only a single element or which it is
@@ -18,7 +18,7 @@
 #' @examples
 #'
 #' # create data with 5 identical scenarios
-#' p <- add_dimension(maxample("pop")[1:3, 1:3, ], nm = paste0("scen", 1:2))
+#' p <- addDim(maxample("pop")[1:3, 1:3, ], item = paste0("scen", 1:2))
 #' str(p)
 #' str(dimReduce(p))
 #'

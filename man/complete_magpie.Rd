@@ -30,7 +30,7 @@ ani <- maxample("animal")
 complete_magpie(ani)
 }
 \seealso{
-\code{\link{add_dimension}},\code{\link{clean_magpie}}
+\code{\link{addDim}},\code{\link{clean_magpie}}
 }
 \author{
 Jan Philipp Dietrich, Benjamin Bodirsky

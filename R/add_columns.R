@@ -9,7 +9,7 @@
 #' @param fill fill value of length 1 for the newly added columns (NA by default)
 #' @return The extended MAgPIE object
 #' @author Jan Philipp Dietrich, Benjamin Bodirsky
-#' @seealso \code{\link{add_dimension}},\code{\link{dimCode}}
+#' @seealso \code{\link{addDim}},\code{\link{dimCode}}
 #' @examples
 #' a <- maxample("animal")
 #' a2 <- add_columns(a, addnm = c("horse", "magpie"), dim = "species", fill = 42)
@@ -24,7 +24,7 @@ add_columns <- function(x, addnm = "new", dim = 3.1, fill = NA) { # nolint: obje
   x <- clean_magpie(x, what = "sets")
   if (length(addnm) == 0) return(x)
   dim <- dimCode(dim, x)
-  add <- add_dimension(dimSums(x, dim = dim), dim = dim, nm = addnm)
+  add <- addDim(dimSums(x, dim = dim), dim = dim, item = addnm)
   add[, , ] <- fill
   getSets(add) <- getSets(x)
   return(mbind(x, add))

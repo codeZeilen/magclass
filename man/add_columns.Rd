@@ -30,7 +30,7 @@ getItems(a2, dim = 3, split = TRUE)
 head(a2[, , "magpie"])
 }
 \seealso{
-\code{\link{add_dimension}},\code{\link{dimCode}}
+\code{\link{addDim}},\code{\link{dimCode}}
 }
 \author{
 Jan Philipp Dietrich, Benjamin Bodirsky

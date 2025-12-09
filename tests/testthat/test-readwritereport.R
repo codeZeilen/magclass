@@ -82,7 +82,7 @@ test_that("append works", {
 })
 
 test_that("multidim handling works", {
-  p <- add_dimension(p, 3.2, "Scenario", "blub")
+  p <- addDim(p, 3.2, "Scenario", "blub")
   expect_warning(r <- write.report(p[, 1:2, ]), "Found Scenario more than once")
   expect_identical(names(r), c("Model", "Scenario", "Region", "Variable", "Unit", "1995",
                                "2005"))

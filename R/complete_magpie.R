@@ -10,7 +10,7 @@
 #' full completion use \code{1:3}
 #' @return The completed MAgPIE object
 #' @author Jan Philipp Dietrich, Benjamin Bodirsky
-#' @seealso \code{\link{add_dimension}},\code{\link{clean_magpie}}
+#' @seealso \code{\link{addDim}},\code{\link{clean_magpie}}
 #' @examples
 #'
 #' pop <- maxample("pop")

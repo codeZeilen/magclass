@@ -23,7 +23,7 @@ A matrix is a 2D table (columns and rows) with values in it which all belong to 
 
 ```{r, echo = TRUE}
 a <- matrix(1:9, 3, 3, dimnames = list(c("AFR", "CPA", "EUR"),
-  paste0("y", 2000:2002)))
+                                       paste0("y", 2000:2002)))
 a
 ```
 
@@ -35,9 +35,9 @@ An array is the extension of a matrix to more than two dimensions. A 2D array is
 
 ```{r, echo = TRUE}
 b <- array(1:18, dim = c(3, 3, 2),
-  dimnames = list(paste0("y", 2000:2002),
-    c("AFR", "CPA", "EUR"),
-    c("IndexA", "IndexB")))
+           dimnames = list(paste0("y", 2000:2002),
+                           c("AFR", "CPA", "EUR"),
+                           c("IndexA", "IndexB")))
 b
 ```
 
@@ -69,7 +69,7 @@ However, that limitation to a 3D-structure does not mean that you are limited to
 
 ```{r, echo = TRUE}
 ar <- array(1:6, c(3, 2), list(c("bla", "blub", "ble"),
-  c("up", "down")))
+                               c("up", "down")))
 a <- as.magpie(ar)
 head(a)
 

@@ -4,7 +4,7 @@ attr(p, "Metadata") <- NULL
 getSets(p)[1:2] <- c("d1", "d2")
 
 test_that("dimReduce works", {
-  p2 <- add_dimension(p, nm = paste0("scen", 1:5))
+  p2 <- addDim(p, item = paste0("scen", 1:5))
   expect_identical(dimReduce(p2), p)
 
   p2[, , ] <- setYears(p2[, 2, ], NULL)

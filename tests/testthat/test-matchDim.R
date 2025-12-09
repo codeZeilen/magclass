@@ -48,7 +48,7 @@ test_that("matchDim works", {
   expect_equal(getItems(x, dim = 3), c("foo", "bar", "qux"))
 
   # reject objects with varying subdimensions ----
-  mp3 <- add_dimension(mp2, dim = 1.2, add = "subregion", "yyy")
+  mp3 <- addDim(mp2, dim = 1.2, dimName = "subregion", "yyy")
   expect_error(matchDim(mp, mp3, dim = 1),
                regexp = "magclass objects x and ref have different number of subdimensions in dimension 1")
   expect_no_error(matchDim(mp, mp3, dim = 2))
