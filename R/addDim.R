@@ -1,7 +1,7 @@
 #' addDim
 #'
-#' Function adds a name dimension as dimension number "dim" with the name
-#' "dimName" with an empty data column with the name "item".
+#' This function adds a named dimension as dimension number "dim" with
+#' the name "dimName" with an empty data column with the name "item".
 #'
 #' @param x MAgPIE object which should be extended.
 #' @param dim The dimension number of the new dimension (e.g. 3.1)
@@ -66,6 +66,13 @@ addDim <- function(x, dim = 3.1, dimName = NULL, item = "dummy", expand = TRUE) 
   return(x)
 }
 
+#' add_dimension
+#'
+#' This function adds a named dimension as dimension number "dim" with
+#' the name "add" with an empty data column with the name "nm".
+#' Please start using this function's successor \link{\code{addDim}}. add_dimension
+#' might eventually become deprecated.
+#'
 #' @inherit addDim
 #' @param add The name of the new dimension
 #' @param nm One or more names of items in the new dimension.

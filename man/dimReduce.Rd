@@ -29,7 +29,7 @@ but in many other cases the results will differ.
 \examples{
 
 # create data with 5 identical scenarios
-p <- addDim(maxample("pop")[1:3, 1:3, ], nm = paste0("scen", 1:2))
+p <- addDim(maxample("pop")[1:3, 1:3, ], item = paste0("scen", 1:2))
 str(p)
 str(dimReduce(p))
 
