@@ -26,7 +26,7 @@ The extended MAgPIE object
 \description{
 This function adds a named dimension as dimension number "dim" with
 the name "add" with an empty data column with the name "nm".
-Please start using this function's successor \link{\code{addDim}}. add_dimension
+Please start using this function's successor \code{\link{addDim}}. add_dimension
 might eventually become deprecated.
 }
 \examples{
