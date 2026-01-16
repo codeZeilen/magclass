@@ -21,8 +21,7 @@ Expands a MAgPIE object based on a reference
 Expansion means here that the dimensions of x are expanded accordingly to
 ref. Please note that this is really only about expansion. In the case that
 one dimension of ref is smaller than of x nothing happens with this
-dimension. At the moment magpie_expand is only internally available in the
-magclass library
+dimension.
 
 You can influence the verbosity of this function by setting the option
 "magclass.verbosity". By default verbosity is set to 1 which means that
