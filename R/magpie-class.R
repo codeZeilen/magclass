@@ -246,8 +246,11 @@ setClass("magpie", contains = "array", prototype = array(0, c(0, 0, 0)))
     return(nchar(gsub("[^\\.]", "", i)))
   }
   if (!is.list(i) && .countdots(i[1]) == .countdots(dimnames[1]) && pmatch == FALSE) {
+    if (getOption("magclasstesting", FALSE)) {
+      stopifnot(identical(anyDuplicated(dimnames), anyDuplicated(as.data.table(dimnames))))
+    }
     # i vector seems to specify the full dimname
-    if (!anyDuplicated(as.data.table(dimnames))) {
+    if (!anyDuplicated(dimnames)) {
       if (invert) {
         return(which(!(dimnames %in% i)))
       } else {
