@@ -253,6 +253,8 @@ setClass("magpie", contains = "array", prototype = array(0, c(0, 0, 0)))
     if (!anyDuplicated(dimnames)) {
       if (invert) {
         return(which(!(dimnames %in% i)))
+      } else if (identical(i, dimnames)) {
+        return(seq_along(i))
       } else {
         match <- match(i, dimnames)
         if (any(is.na(match))) {
