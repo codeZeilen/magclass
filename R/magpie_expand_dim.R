@@ -30,8 +30,8 @@ magpie_expand_dim <- function(x, ref, dim = 1) { # nolint: object_name_linter.
   if (!(dim %in% seq_len(3))) stop("Unsupported dim setting (dim = ", dim, ")")
 
   dimnames2df <- function(x, dim = 1) {
-    xd <- as.data.frame(t(as.data.frame(strsplit(dimnames(x)[[dim]], ".", fixed = TRUE), stringsAsFactors = TRUE)),
-                        stringsAsFactors = TRUE)
+    splits <- strsplit(dimnames(x)[[dim]], ".", fixed = TRUE)
+    xd <- data.frame(do.call(rbind, splits), stringsAsFactors = TRUE)
     rownames(xd) <- NULL
     if (!is.null(names(dimnames(x)))) {
       tmp <- strsplit(names(dimnames(x))[dim], ".", fixed = TRUE)[[1]]
