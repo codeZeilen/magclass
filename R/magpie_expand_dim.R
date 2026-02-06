@@ -27,15 +27,30 @@
 #'  magclass:::magpie_expand_dim(d, e, dim = 1)
 magpie_expand_dim <- function(x, ref, dim = 1) { # nolint: object_name_linter.
 
-  if (!(dim %in% seq_len(3))) stop("Unsupported dim setting (dim = ", dim, ")")
+  if (!(dim %in% seq_len(3))) {
+    stop("Unsupported dim setting (dim = ", dim, ")")
+  }
 
   dimnames2df <- function(x, dim = 1) {
     splits <- strsplit(dimnames(x)[[dim]], ".", fixed = TRUE)
     xd <- data.frame(do.call(rbind, splits), stringsAsFactors = TRUE)
+
+
+    xd2 <- as.data.frame(t(as.data.frame(strsplit(dimnames(x)[[dim]], ".", fixed = TRUE), stringsAsFactors = TRUE)),
+                         stringsAsFactors = TRUE)
+    attr(xd2, "row.names") <- attr(xd, "row.names")
+    colnames(xd2) <- colnames(xd)
+    for (i in seq_len(ncol(xd2))) {
+      names(xd2[[i]]) <- NULL
+    }
+    stopifnot(identical(xd, xd2)) # TODO
+
     rownames(xd) <- NULL
     if (!is.null(names(dimnames(x)))) {
       tmp <- strsplit(names(dimnames(x))[dim], ".", fixed = TRUE)[[1]]
-      if (length(tmp) == ncol(xd)) names(xd) <- tmp
+      if (length(tmp) == ncol(xd)) {
+        names(xd) <- tmp
+      }
     }
     xd$".line" <- seq_len(nrow(xd))
     return(xd)
@@ -84,7 +99,9 @@ magpie_expand_dim <- function(x, ref, dim = 1) { # nolint: object_name_linter.
              by = setdiff(intersect(names(dref), names(dx)), ".line"),
              all.x = TRUE, all.y = TRUE)
 
-  if (anyNA(c(m$.line_ref, m$.line_x))) stop(" Identical set names but different content. Correct set names!")
+  if (anyNA(c(m$.line_ref, m$.line_x))) {
+    stop(" Identical set names but different content. Correct set names!")
+  }
 
   # reorder m so that dref columns appear first
   m <- m[union(names(dref)[seq_len((ncol(dref) - 1))], names(m))]

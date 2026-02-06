@@ -75,7 +75,7 @@ magpie_expand <- function(x, ref) { # nolint: object_name_linter, cyclocomp_lint
                  (!setMatching || names(dimnames(x))[i] == names(dimnames(ref))[i])) {
       # dimension is identical
       next
-    } else if (dim(x)[i] == dim(ref)[i] && setequal(dimnames(x)[[i]], dimnames(ref)[[i]]) &&
+    } else if (dim(x)[i] == dim(ref)[i] && testHelper(x, i, ref) &&
                  (!setMatching || names(dimnames(x))[i] == names(dimnames(ref))[i])) {
       # same length and entries, but different order
       x <- x[dimnames(ref)[[i]], dim = i]
@@ -85,4 +85,11 @@ magpie_expand <- function(x, ref) { # nolint: object_name_linter, cyclocomp_lint
   }
   getSets(x) <- make.unique(getSets(clean_magpie(x, what = "sets")), sep = "")
   return(x)
+}
+
+testHelper <- function(x, i, ref) {
+  original <- all(sort(dimnames(x)[[i]]) == sort(dimnames(ref)[[i]]))
+  out <- setequal(dimnames(x)[[i]], dimnames(ref)[[i]])
+  stopifnot(identical(original, out))
+  return(out)
 }
