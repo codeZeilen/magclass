@@ -27,7 +27,9 @@
 #' @export
 mbind <- function(...) { # nolint: cyclocomp_linter.
   inputs <- list(...)
-  if (length(inputs) == 1 && is.list(inputs[[1]])) inputs <- inputs[[1]]
+  if (length(inputs) == 1 && is.list(inputs[[1]])) {
+    inputs <- inputs[[1]]
+  }
   # Remove NULL elements from list
   for (i in rev(seq_along(inputs))) {
     if (is.null(inputs[[i]])) {
@@ -39,8 +41,9 @@ mbind <- function(...) { # nolint: cyclocomp_linter.
   }
 
   # if all inputs are NULL, return NULL
-  if (0 == length(inputs))
+  if (0 == length(inputs)) {
     return(NULL)
+  }
 
   # store total number of elements to ensure that they remain unchanged
   nElems <- sum(vapply(inputs, length, integer(1)))
@@ -52,22 +55,36 @@ mbind <- function(...) { # nolint: cyclocomp_linter.
   difftemp <- FALSE
   diffdata <- FALSE
   for (i in seq_along(inputs)) {
-    if (!is.magpie(inputs[[i]])) stop("Inputs must all be MAgPIE-objects")
+    if (!is.magpie(inputs[[i]])) {
+      stop("Inputs must all be MAgPIE-objects")
+    }
     for (j in 1:3) {
       if (is.null(dimnames(inputs[[i]])[[j]])) {
         dimnames(inputs[[i]])[[j]] <- paste("dummy", c("", seq_len(dim(inputs[[i]])[j] - 1)), sep = "")
       }
     }
     # Check which dimensions differ
-    if (suppressWarnings(any(sort(dimnames(inputs[[1]])[[1]]) != sort(dimnames(inputs[[i]])[[1]])))) diffspat <- TRUE
-    if (suppressWarnings(any(sort(dimnames(inputs[[1]])[[2]]) != sort(dimnames(inputs[[i]])[[2]])))) difftemp <- TRUE
-    if (suppressWarnings(any(sort(dimnames(inputs[[1]])[[3]]) != sort(dimnames(inputs[[i]])[[3]])))) diffdata <- TRUE
+    diffspat <- !setequal(dimnames(inputs[[1]])[[1]], dimnames(inputs[[i]])[[1]])
+    stopifnot(identical(diffspat, suppressWarnings(any(sort(dimnames(inputs[[1]])[[1]]) != sort(dimnames(inputs[[i]])[[1]]))))) # TODO
+
+    difftemp <- !setequal(dimnames(inputs[[1]])[[2]], dimnames(inputs[[i]])[[2]])
+    stopifnot(identical(difftemp, suppressWarnings(any(sort(dimnames(inputs[[1]])[[2]]) != sort(dimnames(inputs[[i]])[[2]]))))) # TODO
+
+    diffdata <- !setequal(dimnames(inputs[[1]])[[3]], dimnames(inputs[[i]])[[3]])
+    stopifnot(identical(diffdata, suppressWarnings(any(sort(dimnames(inputs[[1]])[[3]]) != sort(dimnames(inputs[[i]])[[3]]))))) # TODO
+
     years <- c(years, getYears(inputs[[i]]))
     elems <- c(elems, getNames(inputs[[i]]))
     cells <- c(cells, getCells(inputs[[i]]))
-    if (!diffspat && ncells(inputs[[1]]) > 1) inputs[[i]] <- inputs[[i]][getCells(inputs[[1]]), , ]
-    if (!difftemp && nyears(inputs[[1]]) > 1) inputs[[i]] <- inputs[[i]][, getYears(inputs[[1]]), ]
-    if (!diffdata &&  ndata(inputs[[1]]) > 1) inputs[[i]] <- inputs[[i]][, , getNames(inputs[[1]])]
+    if (!diffspat && ncells(inputs[[1]]) > 1) {
+      inputs[[i]] <- inputs[[i]][getCells(inputs[[1]]), , ]
+    }
+    if (!difftemp && nyears(inputs[[1]]) > 1) {
+      inputs[[i]] <- inputs[[i]][, getYears(inputs[[1]]), ]
+    }
+    if (!diffdata &&  ndata(inputs[[1]]) > 1) {
+      inputs[[i]] <- inputs[[i]][, , getNames(inputs[[1]])]
+    }
   }
 
   if (!(length(grep(".", cells, fixed = TRUE)) %in% c(0, length(cells)))) {
@@ -119,18 +136,22 @@ mbind <- function(...) { # nolint: cyclocomp_linter.
   }
 
   if (difftemp) {
-    if (length(years) != length(unique(years))) stop("Some years occur more than once!",
-                                                     " Cannot handle this case!")
+    if (length(years) != length(unique(years))) {
+      stop("Some years occur more than once! Cannot handle this case!")
+    }
     output <- new("magpie", abind::abind(inputs, along = 2))
   } else if (diffspat) {
-    if (length(cells) != length(unique(cells))) stop("Some regions/cells occur more than once!",
-                                                     " Cannot handle this case!")
+    if (length(cells) != length(unique(cells))) {
+      stop("Some regions/cells occur more than once! Cannot handle this case!")
+    }
     output <- new("magpie", abind::abind(inputs, along = 1))
   } else {
     tmp <- function(x) return(length(getNames(x, fulldim = TRUE)))
     tmp <- vapply(inputs, tmp, integer(1))
-    if (length(unique(tmp)) > 1) warning("mbind most likely returned an erronous magpie object due to",
-                                         " different numbers of data subdimensions in inputs!")
+    if (length(unique(tmp)) > 1) {
+      warning("mbind most likely returned an erronous magpie object due to",
+              " different numbers of data subdimensions in inputs!")
+    }
     output <- new("magpie", abind::abind(inputs, along = 3))
   }
   for (j in 1:3) {
