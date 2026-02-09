@@ -246,20 +246,16 @@ setClass("magpie", contains = "array", prototype = array(0, c(0, 0, 0)))
     return(nchar(gsub("[^\\.]", "", i)))
   }
   if (!is.list(i) && .countdots(i[1]) == .countdots(dimnames[1]) && pmatch == FALSE) {
-    stopifnot(identical(anyDuplicated(dimnames), anyDuplicated(as.data.table(dimnames)))) # TODO
     # i vector seems to specify the full dimname
     if (!anyDuplicated(dimnames)) {
       if (invert) {
         return(which(!(dimnames %in% i)))
-      # } else if (identical(i, dimnames)) { # TODO comment in
-      #   return(seq_along(i)) # TODO comment in
+      } else if (identical(i, dimnames)) {
+        return(seq_along(i))
       } else {
         match <- match(i, dimnames)
         if (any(is.na(match))) {
           stop("subscript out of bounds (\"", paste0(i[is.na(match)], collapse = "\", \""), "\")")
-        }
-        if (identical(i, dimnames)) {
-          stopifnot(identical(match, seq_along(i))) # TODO
         }
         return(match)
       }

@@ -65,13 +65,8 @@ mbind <- function(...) { # nolint: cyclocomp_linter.
     }
     # Check which dimensions differ
     diffspat <- !setequal(dimnames(inputs[[1]])[[1]], dimnames(inputs[[i]])[[1]])
-    stopifnot(identical(diffspat, suppressWarnings(any(sort(dimnames(inputs[[1]])[[1]]) != sort(dimnames(inputs[[i]])[[1]]))))) # TODO
-
     difftemp <- !setequal(dimnames(inputs[[1]])[[2]], dimnames(inputs[[i]])[[2]])
-    stopifnot(identical(difftemp, suppressWarnings(any(sort(dimnames(inputs[[1]])[[2]]) != sort(dimnames(inputs[[i]])[[2]]))))) # TODO
-
     diffdata <- !setequal(dimnames(inputs[[1]])[[3]], dimnames(inputs[[i]])[[3]])
-    stopifnot(identical(diffdata, suppressWarnings(any(sort(dimnames(inputs[[1]])[[3]]) != sort(dimnames(inputs[[i]])[[3]]))))) # TODO
 
     years <- c(years, getYears(inputs[[i]]))
     elems <- c(elems, getNames(inputs[[i]]))

@@ -35,18 +35,6 @@ magpie_expand_dim <- function(x, ref, dim = 1) { # nolint: object_name_linter.
     splits <- strsplit(dimnames(x)[[dim]], ".", fixed = TRUE)
     xd <- data.frame(do.call(rbind, splits), stringsAsFactors = TRUE)
 
-
-    xd2 <- as.data.frame(t(as.data.frame(strsplit(dimnames(x)[[dim]], ".", fixed = TRUE), stringsAsFactors = TRUE)),
-                         stringsAsFactors = TRUE)
-    attr(xd2, "row.names") <- attr(xd, "row.names") # rownames would convert to character, but it might be integer
-    colnames(xd2) <- colnames(xd)
-    xd3 <- xd # copy so we don't modify xd
-    for (i in seq_len(ncol(xd2))) {
-      names(xd2[[i]]) <- NULL
-      names(xd3[[i]]) <- NULL
-    }
-    stopifnot(identical(xd3, xd2)) # TODO
-
     rownames(xd) <- NULL
     if (!is.null(names(dimnames(x)))) {
       tmp <- strsplit(names(dimnames(x))[dim], ".", fixed = TRUE)[[1]]
