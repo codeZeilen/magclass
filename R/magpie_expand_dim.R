@@ -41,7 +41,7 @@ magpie_expand_dim <- function(x, ref, dim = 1) { # nolint: object_name_linter.
     attr(xd2, "row.names") <- attr(xd, "row.names")
     colnames(xd2) <- colnames(xd)
     for (i in seq_len(ncol(xd2))) {
-      names(xd2[[i]]) <- NULL
+      names(xd2[[i]]) <- names(xd[[i]])
     }
     stopifnot(identical(xd, xd2)) # TODO
 
