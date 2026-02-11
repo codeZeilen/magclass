@@ -5,8 +5,7 @@
 #' Expansion means here that the dimensions of x are expanded accordingly to
 #' ref. Please note that this is really only about expansion. In the case that
 #' one dimension of ref is smaller than of x nothing happens with this
-#' dimension. At the moment magpie_expand is only internally available in the
-#' magclass library
+#' dimension.
 #'
 #' You can influence the verbosity of this function by setting the option
 #' "magclass.verbosity". By default verbosity is set to 1 which means that
@@ -76,7 +75,7 @@ magpie_expand <- function(x, ref) { # nolint: object_name_linter, cyclocomp_lint
                  (!setMatching || names(dimnames(x))[i] == names(dimnames(ref))[i])) {
       # dimension is identical
       next
-    } else if (dim(x)[i] == dim(ref)[i] && all(sort(dimnames(x)[[i]]) == sort(dimnames(ref)[[i]])) &&
+    } else if (dim(x)[i] == dim(ref)[i] && setequal(dimnames(x)[[i]], dimnames(ref)[[i]]) &&
                  (!setMatching || names(dimnames(x))[i] == names(dimnames(ref))[i])) {
       # same length and entries, but different order
       x <- x[dimnames(ref)[[i]], dim = i]

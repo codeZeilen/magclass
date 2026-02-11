@@ -247,9 +247,11 @@ setClass("magpie", contains = "array", prototype = array(0, c(0, 0, 0)))
   }
   if (!is.list(i) && .countdots(i[1]) == .countdots(dimnames[1]) && pmatch == FALSE) {
     # i vector seems to specify the full dimname
-    if (!anyDuplicated(as.data.table(dimnames))) {
+    if (!anyDuplicated(dimnames)) {
       if (invert) {
         return(which(!(dimnames %in% i)))
+      } else if (identical(i, dimnames)) {
+        return(seq_along(i))
       } else {
         match <- match(i, dimnames)
         if (any(is.na(match))) {
