@@ -66,8 +66,7 @@ Other FileIO:
 \code{\link{read.report}()},
 \code{\link{write.magpie}()},
 \code{\link{write.report}()},
-\code{\link{write.report2}()},
-\code{\link{writeNC}()}
+\code{\link{write.report2}()}
 }
 \author{
 Jan Philipp Dietrich, Stephen Bi, Florian Humpenoeder, Pascal Sauer

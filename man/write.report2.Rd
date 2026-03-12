@@ -20,8 +20,7 @@ Other FileIO:
 \code{\link{read.magpie}()},
 \code{\link{read.report}()},
 \code{\link{write.magpie}()},
-\code{\link{write.report}()},
-\code{\link{writeNC}()}
+\code{\link{write.report}()}
 }
 \author{
 Jan Philipp Dietrich

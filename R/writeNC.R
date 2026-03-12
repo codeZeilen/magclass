@@ -12,8 +12,7 @@
 #' @param zname Name of the z dimension in the netCDF file
 #' @param progress If TRUE, print progress messages
 #' @author Pascal Sauer
-#' @family FileIO
-#' @export
+#' @keywords internal
 writeNC <- function(x, filename, unit, ..., compression = 2, missval = NA,
                     gridDefinition = NULL, zname = "time", progress = FALSE) {
   if (!requireNamespace("ncdf4", quietly = TRUE)) {

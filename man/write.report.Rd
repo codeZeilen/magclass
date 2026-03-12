@@ -60,8 +60,7 @@ Other FileIO:
 \code{\link{read.magpie}()},
 \code{\link{read.report}()},
 \code{\link{write.magpie}()},
-\code{\link{write.report2}()},
-\code{\link{writeNC}()}
+\code{\link{write.report2}()}
 }
 \author{
 Jan Philipp Dietrich

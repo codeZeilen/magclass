@@ -40,16 +40,7 @@ lon/lat grid. If NULL, use min/max of coordinates in x and guessResolution}
 \description{
 Write a magpie object to a netCDF file
 }
-\seealso{
-Other FileIO: 
-\code{\link{copy.magpie}()},
-\code{\link{read.magpie}()},
-\code{\link{read.report}()},
-\code{\link{write.magpie}()},
-\code{\link{write.report}()},
-\code{\link{write.report2}()}
-}
 \author{
 Pascal Sauer
 }
-\concept{FileIO}
+\keyword{internal}
