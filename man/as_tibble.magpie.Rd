@@ -64,6 +64,8 @@ Other MAgPIE-Conversions:
 \code{\link{as.SpatRasterDataset}()},
 \code{\link{as.SpatVector}()},
 \code{\link{as.array-methods}},
-\code{\link{as.data.frame-methods}}
+\code{\link{as.data.frame-methods}},
+\code{\link{unwrap}()},
+\code{\link{wrap}()}
 }
 \concept{MAgPIE-Conversions}

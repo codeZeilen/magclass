@@ -19,9 +19,7 @@ difference between unique sorted values. Fall back to 0.5 if guess is infinite.
 }
 \seealso{
 Other SpatialOperations: 
-\code{\link{spatRasterToDataset}()},
-\code{\link{unwrap}()},
-\code{\link{wrap}()}
+\code{\link{spatRasterToDataset}()}
 }
 \author{
 Jan Philipp Dietrich, Pascal Sauer

@@ -16,6 +16,9 @@ A list containing in the first element the dim output and in the
 second element the dimnames output of the reconstructed array.
 }
 \description{
+Deprecated: Use \code{\link{getItems}} instead.
+}
+\details{
 If a MAgPIE object is created from a source with more than one data
 dimension, these data dimensions are combined to a single dimension. fulldim
 reconstructs the original dimensionality and reports it.

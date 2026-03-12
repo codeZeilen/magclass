@@ -25,7 +25,9 @@ Other MAgPIE-Conversions:
 \code{\link{as.SpatVector}()},
 \code{\link{as.array-methods}},
 \code{\link{as.data.frame-methods}},
-\code{\link{as_tibble.magpie}()}
+\code{\link{as_tibble.magpie}()},
+\code{\link{unwrap}()},
+\code{\link{wrap}()}
 }
 \author{
 Pascal Sauer
