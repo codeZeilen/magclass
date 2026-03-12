@@ -18,6 +18,7 @@
 #'
 #' ani <- maxample("animal")
 #' complete_magpie(ani)
+#' @family ObjectCreation
 #' @export
 complete_magpie <- function(x, fill = NA, dim = 3) { # nolint: object_name_linter.
   .expand <- function(x) {

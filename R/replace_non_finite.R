@@ -21,7 +21,7 @@
 #'
 #' replace_non_finite(part / total)
 #'
-
+#' @family Utility
 #' @export
 replace_non_finite <- function(x, replace = 0) { # nolint: object_name_linter.
   x[!is.finite(x)] <- replace

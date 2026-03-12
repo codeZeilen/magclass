@@ -29,6 +29,12 @@ part / total
 replace_non_finite(part / total)
 
 }
+\seealso{
+Other Utility: 
+\code{\link{unitjoin}()},
+\code{\link{unitsplit}()}
+}
 \author{
 Michaja Pehl
 }
+\concept{Utility}

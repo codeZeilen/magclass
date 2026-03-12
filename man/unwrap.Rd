@@ -26,7 +26,13 @@ unwrap(a)
 }
 \seealso{
 \code{\link{wrap}},\code{\link{fulldim}}
+
+Other SpatialOperations: 
+\code{\link{guessResolution}()},
+\code{\link{spatRasterToDataset}()},
+\code{\link{wrap}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{SpatialOperations}

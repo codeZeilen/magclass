@@ -21,6 +21,7 @@
 #'    attr(m, "crs")
 #'    v2 <- as.SpatVector(m)
 #' }
+#' @family MAgPIE-Conversions
 #' @export
 
 as.SpatVector <- function(x) { # nolint: object_name_linter.

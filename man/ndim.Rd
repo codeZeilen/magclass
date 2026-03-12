@@ -28,6 +28,18 @@ MAgPIE-object
   ndim(a,3)
 
 }
+\seealso{
+Other ObjectInfo: 
+\code{\link{dimExists}()},
+\code{\link{fulldim}()},
+\code{\link{hasCoords}()},
+\code{\link{hasSets}()},
+\code{\link{is.temporal}()},
+\code{\link{isYear}()},
+\code{\link{ncells}()},
+\code{\link{sameDims}()}
+}
 \author{
 Jan Philipp Dietrich
 }
+\concept{ObjectInfo}

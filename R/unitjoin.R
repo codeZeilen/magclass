@@ -7,6 +7,7 @@
 #' @param unit vector of strings. If NULL, col 'unit' in x is used
 #' @return data.frame or vector of strings, dependent on x
 #'
+#' @family Utility
 #' @export
 unitjoin <- function(x, unit = NULL, col = "variable") {
   # check whether is a data.frame

@@ -24,6 +24,7 @@
 #' p <- maxample("pop")
 #' time_interpolate(p, "y2000", integrate = TRUE)
 #' time_interpolate(p, c("y1980", "y2000"), integrate = TRUE, extrapolation_type = "constant")
+#' @family TemporalOperations
 #' @importFrom abind abind
 #' @export
 time_interpolate <- function(dataset, interpolated_year, # nolint: object_name_linter.

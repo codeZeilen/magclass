@@ -24,7 +24,16 @@ copying it is also possible to change the file type (e.g. from 'mz' to
 }
 \seealso{
 \code{\link{read.magpie}},\code{\link{write.magpie}}
+
+Other FileIO: 
+\code{\link{read.magpie}()},
+\code{\link{read.report}()},
+\code{\link{write.magpie}()},
+\code{\link{write.report}()},
+\code{\link{write.report2}()},
+\code{\link{writeNC}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{FileIO}

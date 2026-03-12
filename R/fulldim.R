@@ -11,6 +11,7 @@
 #' second element the dimnames output of the reconstructed array.
 #' @author Jan Philipp Dietrich
 #' @seealso \code{\link{as.magpie}},\code{\link{unwrap}},\code{\link{wrap}}
+#' @family ObjectInfo
 #' @export
 fulldim <- function(x, sep = ".") { # nolint: undesirable_function_linter.
   .Deprecated("getItems")

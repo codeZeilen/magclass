@@ -54,7 +54,16 @@ write.report(maxample("pop"))
 }
 \seealso{
 \code{\link{read.report}}
+
+Other FileIO: 
+\code{\link{copy.magpie}()},
+\code{\link{read.magpie}()},
+\code{\link{read.report}()},
+\code{\link{write.magpie}()},
+\code{\link{write.report2}()},
+\code{\link{writeNC}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{FileIO}

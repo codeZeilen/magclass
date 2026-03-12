@@ -34,6 +34,13 @@ magpply(pop, FUN = sum, MARGIN = 2)
 fourdim <- pop * setNames(pop, c("jkk", "lk"))
 magpply(fourdim, FUN = sum, MARGIN = c(1, 3.1))
 }
+\seealso{
+Other SelectionCalculation: 
+\code{\link{mcalc}()},
+\code{\link{mselect}()},
+\code{\link{where}()}
+}
 \author{
 Jan Philipp Dietrich, Benjamin Leon Bodirsky
 }
+\concept{SelectionCalculation}

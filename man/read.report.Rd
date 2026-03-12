@@ -74,7 +74,16 @@ read.report("report.csv")
 }
 \seealso{
 \code{\link{write.report}}
+
+Other FileIO: 
+\code{\link{copy.magpie}()},
+\code{\link{read.magpie}()},
+\code{\link{write.magpie}()},
+\code{\link{write.report}()},
+\code{\link{write.report2}()},
+\code{\link{writeNC}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{FileIO}

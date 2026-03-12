@@ -28,6 +28,16 @@ head(a)
 head(dimOrder(a, perm = 3:1, dim = 1))
 head(dimOrder(a, perm = c(2,1,3), dim = 3))
 }
+\seealso{
+Other DimensionManipulation: 
+\code{\link{addDim}()},
+\code{\link{add_columns}()},
+\code{\link{collapseDim}()},
+\code{\link{collapseNames}()},
+\code{\link{dimCode}()},
+\code{\link{dimReduce}()}
+}
 \author{
 Jan Philipp Dietrich, Benjamin Leon Bodirsky
 }
+\concept{DimensionManipulation}

@@ -27,7 +27,13 @@ under LGPL>=2.1 and written by Henrik Bengtsson.
 }
 \seealso{
 \code{\link{unwrap}},\code{\link{fulldim}}
+
+Other SpatialOperations: 
+\code{\link{guessResolution}()},
+\code{\link{spatRasterToDataset}()},
+\code{\link{unwrap}()}
 }
 \author{
 Henrik Bengtsson, Jan Philipp Dietrich
 }
+\concept{SpatialOperations}

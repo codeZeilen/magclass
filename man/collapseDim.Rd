@@ -50,7 +50,16 @@ collapseDim(x, dim = 3.2)
 \seealso{
 \code{\link{getItems}}
 \code{"\linkS4class{magpie}"}
+
+Other DimensionManipulation: 
+\code{\link{addDim}()},
+\code{\link{add_columns}()},
+\code{\link{collapseNames}()},
+\code{\link{dimCode}()},
+\code{\link{dimOrder}()},
+\code{\link{dimReduce}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{DimensionManipulation}

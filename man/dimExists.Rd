@@ -28,7 +28,18 @@ dimExists(c("t", "scenario", "blablub"), pop)
 }
 \seealso{
 \code{\link{dimCode}}
+
+Other ObjectInfo: 
+\code{\link{fulldim}()},
+\code{\link{hasCoords}()},
+\code{\link{hasSets}()},
+\code{\link{is.temporal}()},
+\code{\link{isYear}()},
+\code{\link{ncells}()},
+\code{\link{ndim}()},
+\code{\link{sameDims}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{ObjectInfo}

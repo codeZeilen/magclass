@@ -24,4 +24,14 @@
 removing MAgPIE-object specific elements } }
 }
 
+\seealso{
+Other MAgPIE-Conversions: 
+\code{\link{as.RasterBrick}()},
+\code{\link{as.SpatRaster}()},
+\code{\link{as.SpatRasterDataset}()},
+\code{\link{as.SpatVector}()},
+\code{\link{as.data.frame-methods}},
+\code{\link{as_tibble.magpie}()}
+}
+\concept{MAgPIE-Conversions}
 \keyword{methods}

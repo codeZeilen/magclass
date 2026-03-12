@@ -19,6 +19,7 @@
 #' @examples
 #' x <- maxample("pop")
 #' setItems(x, "i", paste0("REG", 1:ncells(x)))
+#' @family GetterSetter
 #' @export
 setItems <- function(x, dim, value, maindim = NULL, raw = FALSE) {
   getItems(x, dim = dim, maindim = maindim, raw = raw) <- value

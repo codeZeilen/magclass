@@ -19,6 +19,7 @@
 #' \item{list("signature(x = \"magpie\")")}{ classical method prepared to
 #' handle MAgPIE objects } }
 #' @keywords methods ~~ other possible keyword(s) ~~
+#' @family Aggregation
 #' @exportMethod rowSums
 
 setMethod("rowSums",

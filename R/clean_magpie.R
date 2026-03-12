@@ -20,6 +20,7 @@
 #'
 #' pop <- maxample("pop")
 #' a <- clean_magpie(pop)
+#' @family ObjectCreation
 #' @export
 clean_magpie <- function(x, what = "all", maindim = 1:3) { # nolint: object_name_linter, cyclocomp_linter.
   availableTypes <- c("cells", "items", "sets")

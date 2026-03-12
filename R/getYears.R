@@ -26,6 +26,7 @@
 #' getYears(a)
 #'  setYears(a, 1995)
 #'
+#' @family GetterSetter
 #' @export
 getYears <- function(x,
                      as.integer = FALSE) { # nolint: object_name_linter.

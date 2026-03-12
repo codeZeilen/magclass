@@ -6,6 +6,7 @@
 #'
 #' @returns A logical indicating whether the magpie objects have the same items in every dimension.
 #' @author Pascal Sauer, Patrick Rein
+#' @family ObjectInfo
 #' @export
 sameDims <- function(...) {
   magpies <- list(...)

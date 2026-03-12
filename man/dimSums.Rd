@@ -28,7 +28,12 @@ dimSums(a, dim = c("x", "y", "cell", "month"))
 }
 \seealso{
 \code{\link{rowSums}}, \code{\link{getItems}}, \code{\link{dimCode}}
+
+Other Aggregation: 
+\code{\link{colSums-methods}},
+\code{\link{rowSums-methods}}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{Aggregation}

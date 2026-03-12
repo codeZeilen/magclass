@@ -21,6 +21,7 @@
 #' a <- maxample("animal")
 #' str(addDim(a, dim = 3.2))
 #' str(addDim(a, dim = 2.3, item = paste0("d", 1:3)))
+#' @family DimensionManipulation
 #' @export
 addDim <- function(x, dim = 3.1, dimName = NULL, item = "dummy", expand = TRUE) {
   x <- clean_magpie(x, what = "sets")

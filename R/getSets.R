@@ -26,6 +26,7 @@
 #'  getSets(a)["d3.1"] <- "BLA"
 #'  getSets(a, fulldim = FALSE)
 #'  getSets(a)
+#' @family GetterSetter
 #' @export
 getSets <- function(x, fulldim = TRUE, sep = ".") {
   out <- names(dimnames(x))[drop = FALSE]

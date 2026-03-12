@@ -13,6 +13,7 @@
 #' @examples
 #' pop <- maxample("pop")
 #' a <- magpiesort(pop)
+#' @family DataBinding
 #' @export
 magpiesort <- function(x) {
   if (!is.magpie(x)) {

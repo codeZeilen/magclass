@@ -22,6 +22,7 @@
 #'  getComment(a) <- c("bla", "blubb")
 #'  getComment(a)
 #'
+#' @family GetterSetter
 #' @export
 getComment <- function(x) {
   return(attr(x, "comment"))

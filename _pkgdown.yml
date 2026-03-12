@@ -4,3 +4,106 @@ template:
 
 development:
   mode: auto
+
+reference:
+  - title: Conversion to and from MAgPIE Objects
+    desc: >
+      Functions for converting between MAgPIE objects and other data types
+      like arrays, data.frames, tibbles, and spatial formats.
+    contents:
+      - has_concept("MAgPIE-Conversions")
+  - title: Getter and Setter Functions
+    desc: >
+      Functions for getting and setting dimension names, items, and metadata
+      of MAgPIE objects.
+    contents:
+      - has_concept("GetterSetter")
+  - title: Object Information
+    desc: >
+      Functions for querying object properties like dimensions, size,
+      and checking object characteristics.
+    contents:
+      - has_concept("ObjectInfo")
+  - title: Dimension Manipulation
+    desc: >
+      Functions for manipulating dimensions of MAgPIE objects including
+      adding, collapsing, and reordering dimensions.
+    contents:
+      - has_concept("DimensionManipulation")
+  - title: File I/O
+    desc: >
+      Functions for reading and writing MAgPIE objects to various
+      file formats.
+    contents:
+      - has_concept("FileIO")
+  - title: Aggregation
+    desc: >
+      Functions for summing and aggregating data across dimensions.
+    contents:
+      - has_concept("Aggregation")
+  - title: Element-wise Comparison
+    desc: >
+      Functions for element-wise minimum and maximum operations.
+    contents:
+      - has_concept("Comparison")
+  - title: Data Binding
+    desc: >
+      Functions for binding, merging, and expanding MAgPIE objects.
+    contents:
+      - has_concept("DataBinding")
+  - title: Object Creation
+    desc: >
+      Functions for creating and validating MAgPIE objects.
+    contents:
+      - has_concept("ObjectCreation")
+  - title: Temporal Operations
+    desc: >
+      Functions for temporal interpolation, convergence, and time-based
+      calculations.
+    contents:
+      - has_concept("TemporalOperations")
+  - title: Selection and Calculation
+    desc: >
+      Functions for selecting subsets and performing calculations
+      on MAgPIE objects.
+    contents:
+      - has_concept("SelectionCalculation")
+  - title: Display
+    desc: >
+      Functions for displaying, printing, and visualizing MAgPIE objects.
+    contents:
+      - has_concept("Display")
+  - title: Spatial Operations
+    desc: >
+      Functions for working with spatial data including array reshaping,
+      coordinate handling, and raster operations.
+    contents:
+      - has_concept("SpatialOperations")
+  - title: Utility Functions
+    desc: >
+      Miscellaneous utility functions.
+    contents:
+      - has_concept("Utility")
+  - title: Math Operations
+    desc: >
+      Mathematical operations on MAgPIE objects.
+    contents:
+      - log-methods
+      - round-methods
+  - title: MAgPIE Class and Data
+    desc: >
+      MAgPIE class definition and example data.
+    contents:
+      - magpie-class
+      - magclass-package
+      - magclassdata
+      - population_magpie
+  - title: Internal Functions
+    desc: >
+      Internal functions and deprecated functions.
+    contents:
+      - add_dimension
+      - escapeRegex
+      - magpie_expand_dim
+      - sizeCheck
+      - suppressSpecificWarnings

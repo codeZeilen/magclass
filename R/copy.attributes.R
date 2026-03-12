@@ -30,6 +30,7 @@
 #' copy.attributes(to) <- from
 #' print(attributes(to))
 #'
+#' @family ObjectCreation
 #' @export
 copy.attributes <- function(from, # nolint: object_name_linter.
                             to, delete = c("names", "row.names", "class", "dim", "dimnames"), delete2 = NULL) {

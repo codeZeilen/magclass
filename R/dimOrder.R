@@ -15,6 +15,7 @@
 #' head(a)
 #' head(dimOrder(a, perm = 3:1, dim = 1))
 #' head(dimOrder(a, perm = c(2,1,3), dim = 3))
+#' @family DimensionManipulation
 #' @export
 
 dimOrder <- function(x, perm, dim = 3) {

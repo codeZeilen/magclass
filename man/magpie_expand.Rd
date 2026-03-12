@@ -50,7 +50,15 @@ magpie_expand(b, a)
 }
 \seealso{
 \code{\link{as.magpie}}, \code{\link[base]{options}}
+
+Other DataBinding: 
+\code{\link{cbind.magpie}()},
+\code{\link{extend}()},
+\code{\link{magpiesort}()},
+\code{\link{matchDim}()},
+\code{\link{mbind}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{DataBinding}

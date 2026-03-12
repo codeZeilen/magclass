@@ -12,6 +12,7 @@
 #' @seealso \code{\link[utils]{str}}
 #' @examples
 #' str(maxample("pop"))
+#' @family Display
 #' @export
 str.magpie <- function(object, ...) {
   cat("A magpie object (package: magclass)\n")

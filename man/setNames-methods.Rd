@@ -34,5 +34,20 @@ consistent to the already existing function setNames.
 
 \seealso{
 \code{\link{getNames}},
+
+Other GetterSetter: 
+\code{\link{getCPR}()},
+\code{\link{getCells}()},
+\code{\link{getComment}()},
+\code{\link{getCoords}()},
+\code{\link{getDim}()},
+\code{\link{getItems}()},
+\code{\link{getNames}()},
+\code{\link{getRegionList}()},
+\code{\link{getRegions}()},
+\code{\link{getSets}()},
+\code{\link{getYears}()},
+\code{\link{setItems}()}
 }
+\concept{GetterSetter}
 \keyword{methods}

@@ -14,6 +14,7 @@
 #' nyears(a)
 #' ndata(a)
 #' nregions(a)
+#' @family ObjectInfo
 #' @export
 ncells <- function(x) {
   return(dim(x)[1])

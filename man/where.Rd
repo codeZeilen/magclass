@@ -24,7 +24,13 @@ where(p > 500)
 }
 \seealso{
 whereplot in package luplot
+
+Other SelectionCalculation: 
+\code{\link{magpply}()},
+\code{\link{mcalc}()},
+\code{\link{mselect}()}
 }
 \author{
 Benjamin Leon Bodirsky, Jan Philipp Dietrich
 }
+\concept{SelectionCalculation}

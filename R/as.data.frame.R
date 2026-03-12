@@ -35,6 +35,7 @@
 #' head(as.data.frame(a, rev = 3, raw = TRUE))
 #' attr(as.data.frame(a, rev = 3), "dimtype")
 #'
+#' @family MAgPIE-Conversions
 #' @importFrom utils type.convert
 #' @exportMethod as.data.frame
 

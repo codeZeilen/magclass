@@ -96,6 +96,7 @@
 #' path <- tempfile(fileext = ".mz")
 #' write.magpie(pop, path)
 #' pop2 <- read.magpie(path)
+#' @family FileIO
 #' @export
 write.magpie <- function(x, # nolint: object_name_linter, cyclocomp_linter.
                          file_name, file_folder = "", file_type = NULL, # nolint: object_name_linter.

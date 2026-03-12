@@ -39,7 +39,16 @@ dimCode(c("t", "scenario", "blablub"), pop)
 }
 \seealso{
 \code{\link{mselect}}, \code{\link{getDim}}
+
+Other DimensionManipulation: 
+\code{\link{addDim}()},
+\code{\link{add_columns}()},
+\code{\link{collapseDim}()},
+\code{\link{collapseNames}()},
+\code{\link{dimOrder}()},
+\code{\link{dimReduce}()}
 }
 \author{
 Jan Philipp Dietrich, Kristine Karstens
 }
+\concept{DimensionManipulation}

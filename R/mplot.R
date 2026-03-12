@@ -6,6 +6,7 @@
 #' @param global Whether data should be aggregated over regions to global values.
 #' @param total Whether the total of all data values should also be visualized.
 #' @author Pascal Sauer, Patrick Rein
+#' @family Display
 #' @importFrom rlang .data
 #' @export
 mplot <- function(px, global = TRUE, total = FALSE) {

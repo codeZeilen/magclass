@@ -7,6 +7,7 @@
 #' of \code{\link{getCoords}})
 #' @return The guessed resolution of the data
 #' @author Jan Philipp Dietrich, Pascal Sauer
+#' @family SpatialOperations
 #' @export
 guessResolution <- function(x) {
   if (is.magpie(x)) {

@@ -15,6 +15,7 @@
 #' \item{list("signature(x = \"magpie\")")}{ Conversion takes place just by
 #' removing MAgPIE-object specific elements } }
 #' @keywords methods
+#' @family MAgPIE-Conversions
 #' @importFrom methods as setMethod signature
 #' @exportMethod as.array
 

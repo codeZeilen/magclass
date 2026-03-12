@@ -57,3 +57,13 @@ A tibble object
 \description{
 magpie method for tibble::as_tibble
 }
+\seealso{
+Other MAgPIE-Conversions: 
+\code{\link{as.RasterBrick}()},
+\code{\link{as.SpatRaster}()},
+\code{\link{as.SpatRasterDataset}()},
+\code{\link{as.SpatVector}()},
+\code{\link{as.array-methods}},
+\code{\link{as.data.frame-methods}}
+}
+\concept{MAgPIE-Conversions}

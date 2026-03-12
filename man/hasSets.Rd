@@ -23,7 +23,18 @@ hasSets(maxample("animal"))
 }
 \seealso{
 \code{\link{getCoords}}
+
+Other ObjectInfo: 
+\code{\link{dimExists}()},
+\code{\link{fulldim}()},
+\code{\link{hasCoords}()},
+\code{\link{is.temporal}()},
+\code{\link{isYear}()},
+\code{\link{ncells}()},
+\code{\link{ndim}()},
+\code{\link{sameDims}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{ObjectInfo}

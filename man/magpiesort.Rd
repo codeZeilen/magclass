@@ -24,7 +24,15 @@ a <- magpiesort(pop)
 }
 \seealso{
 \code{"\linkS4class{magpie}"}
+
+Other DataBinding: 
+\code{\link{cbind.magpie}()},
+\code{\link{extend}()},
+\code{\link{magpie_expand}()},
+\code{\link{matchDim}()},
+\code{\link{mbind}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{DataBinding}

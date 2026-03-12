@@ -17,6 +17,13 @@ The guessed resolution of the data
 Guess the resolution of the given magpie object/coordinates by looking at the minimum
 difference between unique sorted values. Fall back to 0.5 if guess is infinite.
 }
+\seealso{
+Other SpatialOperations: 
+\code{\link{spatRasterToDataset}()},
+\code{\link{unwrap}()},
+\code{\link{wrap}()}
+}
 \author{
 Jan Philipp Dietrich, Pascal Sauer
 }
+\concept{SpatialOperations}

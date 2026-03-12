@@ -13,6 +13,7 @@
 #' @usage NULL
 #' @docType methods
 #' @keywords methods
+#' @family Comparison
 #' @author Pascal Sauer, Patrick Rein
 NULL
 

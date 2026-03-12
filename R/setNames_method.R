@@ -20,6 +20,7 @@
 #' \item{list("signature(object = \"magpie\")")}{ setNames for MAgPIE objects} }
 #' @seealso \code{\link{getNames}},
 #' @keywords methods
+#' @family GetterSetter
 #' @exportMethod setNames
 
 setMethod("setNames",

@@ -30,7 +30,16 @@ if (requireNamespace("raster", quietly = TRUE)) {
 }
 \seealso{
 \code{\link{getCoords}}
+
+Other MAgPIE-Conversions: 
+\code{\link{as.SpatRaster}()},
+\code{\link{as.SpatRasterDataset}()},
+\code{\link{as.SpatVector}()},
+\code{\link{as.array-methods}},
+\code{\link{as.data.frame-methods}},
+\code{\link{as_tibble.magpie}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{MAgPIE-Conversions}

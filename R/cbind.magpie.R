@@ -8,6 +8,7 @@
 #' @param deparse.level see \link[base]{cbind}
 #' @return A matrix as if cbind was applied to the internal vector of the MAgPIE objects
 #' @author Patrick Rein
+#' @family DataBinding
 #' @export
 
 cbind.magpie <- function(..., deparse.level = 1) { # nolint: object_name_linter.

@@ -31,7 +31,16 @@ head(a2[, , "magpie"])
 }
 \seealso{
 \code{\link{addDim}},\code{\link{dimCode}}
+
+Other DimensionManipulation: 
+\code{\link{addDim}()},
+\code{\link{collapseDim}()},
+\code{\link{collapseNames}()},
+\code{\link{dimCode}()},
+\code{\link{dimOrder}()},
+\code{\link{dimReduce}()}
 }
 \author{
 Jan Philipp Dietrich, Benjamin Bodirsky
 }
+\concept{DimensionManipulation}

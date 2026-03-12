@@ -23,3 +23,9 @@ joins a data.frame or vector of strings with variable and unit separated into
 a data.frame with variable and unit joined as 'variable (unit)'.
 Use magclass::unitsplit to split them again
 }
+\seealso{
+Other Utility: 
+\code{\link{replace_non_finite}()},
+\code{\link{unitsplit}()}
+}
+\concept{Utility}

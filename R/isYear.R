@@ -14,6 +14,7 @@
 #' x <- c("1955", "y1853", "12a4")
 #' isYear(x, with_y = TRUE)
 #' isYear(x, with_y = FALSE)
+#' @family ObjectInfo
 #' @export
 isYear <- function(x, with_y = TRUE) { # nolint: object_name_linter.
   if (is.null(x)) return(FALSE)

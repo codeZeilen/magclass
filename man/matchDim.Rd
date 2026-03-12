@@ -27,6 +27,15 @@ magpie object \code{ref}.  Dimension names not present in \code{x} are added and
 the value provided by \code{fill}.  Dimension names not present in \code{ref} are
 cropped.
 }
+\seealso{
+Other DataBinding: 
+\code{\link{cbind.magpie}()},
+\code{\link{extend}()},
+\code{\link{magpie_expand}()},
+\code{\link{magpiesort}()},
+\code{\link{mbind}()}
+}
 \author{
 Falk Benke
 }
+\concept{DataBinding}

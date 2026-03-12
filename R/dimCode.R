@@ -24,6 +24,7 @@
 #'
 #' pop <- maxample("pop")
 #' dimCode(c("t", "scenario", "blablub"), pop)
+#' @family DimensionManipulation
 #' @export
 dimCode <- function(dim, x, missing = 0, strict = FALSE, sep = ".") {
 
