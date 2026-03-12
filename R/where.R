@@ -12,6 +12,7 @@
 #'
 #' p <- maxample("pop")
 #' where(p > 500)
+#' @family SelectionCalculation
 #' @export
 where <- function(x, plot = NULL) {
   if (!is.null(plot)) warning("Argument plot is deprecated. Use whereplot() for plot=T and where() for plot=F.")

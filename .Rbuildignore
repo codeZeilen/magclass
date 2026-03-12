@@ -17,3 +17,4 @@ cran-comments.md
 ^.*\CITATION.cff$
 ^CRAN-SUBMISSION$
 ^_pkgdown\.yml$
+^\.claude$

@@ -14,6 +14,7 @@
 #'
 #' a <- as.magpie(array(1:6, c(3, 2), list(c("bla", "blub", "ble"), c("up", "down"))))
 #' unwrap(a)
+#' @family MAgPIE-Conversions
 #' @export
 unwrap <- function(x, sep = NULL) {
   if (!is.null(sep)) warning("\"sep\" argument is not supported anymore.")

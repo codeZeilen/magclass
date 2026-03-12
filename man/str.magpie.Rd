@@ -24,7 +24,15 @@ str(maxample("pop"))
 }
 \seealso{
 \code{\link[utils]{str}}
+
+Other Display: 
+\code{\link{head.magpie}()},
+\code{\link{maxample}()},
+\code{\link{mplot}()},
+\code{\link{print.magpie}()},
+\code{\link{show-methods}}
 }
 \author{
 Pascal Sauer
 }
+\concept{Display}

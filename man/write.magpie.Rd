@@ -126,7 +126,15 @@ pop2 <- read.magpie(path)
 \seealso{
 \code{"\linkS4class{magpie}"},
 \code{\link{read.magpie}},\code{\link{mbind}}
+
+Other FileIO: 
+\code{\link{copy.magpie}()},
+\code{\link{read.magpie}()},
+\code{\link{read.report}()},
+\code{\link{write.report}()},
+\code{\link{write.report2}()}
 }
 \author{
 Jan Philipp Dietrich, Stephen Bi, Florian Humpenoeder, Pascal Sauer
 }
+\concept{FileIO}

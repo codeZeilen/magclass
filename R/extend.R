@@ -12,6 +12,7 @@
 #' throw an error if the coordinates of x are not a subset of the extended coordinates.
 #' @return Magpie object x with dense grid according to gridDefinition, gaps filled with NA.
 #' @author Pascal Sauer
+#' @family DataBinding
 #' @export
 extend <- function(x, gridDefinition = NULL, crop = FALSE) {
   if (is.null(gridDefinition)) {

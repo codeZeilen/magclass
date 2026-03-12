@@ -22,6 +22,7 @@
 #' a <- mbind(pop, pop)
 #' dim(pop)
 #' dim(a)
+#' @family DataBinding
 #' @importFrom methods new
 #' @importFrom abind abind
 #' @export

@@ -18,6 +18,7 @@
 #'    m <- as.magpie(r)
 #'    r2 <- as.SpatRaster(m)
 #' }
+#' @family MAgPIE-Conversions
 #' @export
 
 

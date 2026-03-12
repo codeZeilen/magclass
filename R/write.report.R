@@ -26,6 +26,7 @@
 #' @examples
 #'
 #' write.report(maxample("pop"))
+#' @family FileIO
 #' @importFrom utils write.table
 #' @export
 write.report <- function(x, # nolint: object_name_linter.

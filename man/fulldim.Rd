@@ -16,13 +16,27 @@ A list containing in the first element the dim output and in the
 second element the dimnames output of the reconstructed array.
 }
 \description{
+Deprecated: Use \code{\link{getItems}} instead.
+}
+\details{
 If a MAgPIE object is created from a source with more than one data
 dimension, these data dimensions are combined to a single dimension. fulldim
 reconstructs the original dimensionality and reports it.
 }
 \seealso{
 \code{\link{as.magpie}},\code{\link{unwrap}},\code{\link{wrap}}
+
+Other ObjectInfo: 
+\code{\link{dimExists}()},
+\code{\link{hasCoords}()},
+\code{\link{hasSets}()},
+\code{\link{is.temporal}()},
+\code{\link{isYear}()},
+\code{\link{ncells}()},
+\code{\link{ndim}()},
+\code{\link{sameDims}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{ObjectInfo}

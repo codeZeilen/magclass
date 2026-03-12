@@ -26,6 +26,15 @@ a <- maxample("animal")
 str(a)
 getItems(a, split = TRUE)
 }
+\seealso{
+Other Display: 
+\code{\link{head.magpie}()},
+\code{\link{mplot}()},
+\code{\link{print.magpie}()},
+\code{\link{show-methods}},
+\code{\link{str.magpie}()}
+}
 \author{
 Jan Philipp Dietrich
 }
+\concept{Display}

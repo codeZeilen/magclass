@@ -33,7 +33,13 @@ a <- clean_magpie(pop)
 }
 \seealso{
 \code{"\linkS4class{magpie}"}
+
+Other ObjectCreation: 
+\code{\link{complete_magpie}()},
+\code{\link{copy.attributes}()},
+\code{\link{new.magpie}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{ObjectCreation}

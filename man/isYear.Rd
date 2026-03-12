@@ -25,6 +25,18 @@ x <- c("1955", "y1853", "12a4")
 isYear(x, with_y = TRUE)
 isYear(x, with_y = FALSE)
 }
+\seealso{
+Other ObjectInfo: 
+\code{\link{dimExists}()},
+\code{\link{fulldim}()},
+\code{\link{hasCoords}()},
+\code{\link{hasSets}()},
+\code{\link{is.temporal}()},
+\code{\link{ncells}()},
+\code{\link{ndim}()},
+\code{\link{sameDims}()}
+}
 \author{
 Benjamin Bodirsky
 }
+\concept{ObjectInfo}

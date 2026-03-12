@@ -42,6 +42,18 @@ nyears(a)
 ndata(a)
 nregions(a)
 }
+\seealso{
+Other ObjectInfo: 
+\code{\link{dimExists}()},
+\code{\link{fulldim}()},
+\code{\link{hasCoords}()},
+\code{\link{hasSets}()},
+\code{\link{is.temporal}()},
+\code{\link{isYear}()},
+\code{\link{ndim}()},
+\code{\link{sameDims}()}
+}
 \author{
 Jan Philipp Dietrich
 }
+\concept{ObjectInfo}

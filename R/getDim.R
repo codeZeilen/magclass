@@ -21,6 +21,7 @@
 #'  getDim(c("AFR", "CPA"), pop, fullmatch = TRUE)
 #'  getDim(c("AFR", "CPA"), pop, dimCode = FALSE)
 #'
+#' @family GetterSetter
 #' @export
 getDim <- function(elems, x, fullmatch = FALSE, dimCode = TRUE) {
 

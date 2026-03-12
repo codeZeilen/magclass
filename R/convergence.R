@@ -34,6 +34,7 @@
 #' pop <- maxample("pop")
 #' population <- add_columns(pop, "MIX")
 #' population[, , "MIX"] <- convergence(population[, , "A2"], population[, , "B1"])
+#' @family TemporalOperations
 #' @export
 convergence <- function(origin, aim,
                         start_year = NULL, end_year = NULL, # nolint: object_name_linter.

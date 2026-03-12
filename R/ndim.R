@@ -16,6 +16,7 @@
 #'   ndim(a,2)
 #'   ndim(a,3)
 #'
+#' @family ObjectInfo
 #' @export
 ndim <- function(x, dim = NULL) {
   if (is.null(dim)) return(ndim(x, 1) + ndim(x, 2) + ndim(x, 3))

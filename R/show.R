@@ -8,6 +8,7 @@
 #' @docType methods
 #' @param object A MAgPIE-object
 #' @keywords methods
+#' @family Display
 #' @author Pascal Sauer
 #'
 #' @exportMethod show

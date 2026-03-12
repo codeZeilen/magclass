@@ -62,6 +62,13 @@ copy.attributes(to) <- from
 print(attributes(to))
 
 }
+\seealso{
+Other ObjectCreation: 
+\code{\link{clean_magpie}()},
+\code{\link{complete_magpie}()},
+\code{\link{new.magpie}()}
+}
 \author{
 Jan Philipp Dietrich
 }
+\concept{ObjectCreation}

@@ -18,6 +18,7 @@
 #' magpply(pop, FUN = sum, MARGIN = 2)
 #' fourdim <- pop * setNames(pop, c("jkk", "lk"))
 #' magpply(fourdim, FUN = sum, MARGIN = c(1, 3.1))
+#' @family SelectionCalculation
 #' @export
 magpply <- function( # nolint: cyclocomp_linter.
   X, FUN, MARGIN = NULL, DIM = NULL, ..., INTEGRATE = FALSE # nolint: object_name_linter.

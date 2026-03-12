@@ -48,4 +48,16 @@ head(as.data.frame(a, rev = 3, raw = TRUE))
 attr(as.data.frame(a, rev = 3), "dimtype")
 
 }
+\seealso{
+Other MAgPIE-Conversions: 
+\code{\link{as.RasterBrick}()},
+\code{\link{as.SpatRaster}()},
+\code{\link{as.SpatRasterDataset}()},
+\code{\link{as.SpatVector}()},
+\code{\link{as.array-methods}},
+\code{\link{as_tibble.magpie}()},
+\code{\link{unwrap}()},
+\code{\link{wrap}()}
+}
+\concept{MAgPIE-Conversions}
 \keyword{methods}

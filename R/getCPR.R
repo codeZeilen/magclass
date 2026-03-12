@@ -22,6 +22,7 @@
 #' getCPR(a, dim = 3.2)
 #' getCPR(a, dim = "country")
 #' getCPR(a, dim = c("color", "species"))
+#' @family GetterSetter
 #' @export
 
 getCPR <- function(x, dim = 1.1) {

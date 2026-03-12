@@ -3,6 +3,7 @@
 #' @param x A magpie object
 #' @inheritParams tibble::as_tibble
 #' @return A tibble object
+#' @family MAgPIE-Conversions
 #' @exportS3Method tibble::as_tibble
 as_tibble.magpie <- function(x,
                              ...,

@@ -7,6 +7,7 @@
 #' @param ... arguments passed to as.SpatRaster
 #' @return A SpatRasterDataset object
 #' @author Pascal Sauer
+#' @family MAgPIE-Conversions
 #' @export
 as.SpatRasterDataset <- function(...) { # nolint: object_name_linter.
   return(spatRasterToDataset(as.SpatRaster(...)))

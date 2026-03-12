@@ -20,6 +20,7 @@
 #' print(pop)
 #' print(pop[, 1, ], drop = FALSE)
 #' print(pop[, 1, ])
+#' @family Display
 #' @export
 print.magpie <- function(x, drop = TRUE, reshape = FALSE, ...) {
   if (length(reshape) != 2 || !is.vector(reshape, mode = "numeric")) {

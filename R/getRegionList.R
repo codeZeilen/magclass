@@ -16,6 +16,7 @@
 #'
 #' # a <- read.magpie("example.mz")
 #' # getRegionList(a)
+#' @family GetterSetter
 #' @export
 getRegionList <- function(x) { # nolint: undesirable_function_linter.
   .Deprecated("getItems")

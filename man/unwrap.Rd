@@ -26,7 +26,18 @@ unwrap(a)
 }
 \seealso{
 \code{\link{wrap}},\code{\link{fulldim}}
+
+Other MAgPIE-Conversions: 
+\code{\link{as.RasterBrick}()},
+\code{\link{as.SpatRaster}()},
+\code{\link{as.SpatRasterDataset}()},
+\code{\link{as.SpatVector}()},
+\code{\link{as.array-methods}},
+\code{\link{as.data.frame-methods}},
+\code{\link{as_tibble.magpie}()},
+\code{\link{wrap}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{MAgPIE-Conversions}

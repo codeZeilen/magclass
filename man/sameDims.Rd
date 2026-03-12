@@ -15,6 +15,18 @@ A logical indicating whether the magpie objects have the same items in every dim
 \description{
 Checks whether magpie objects have the same items in every dimension (ignoring order).
 }
+\seealso{
+Other ObjectInfo: 
+\code{\link{dimExists}()},
+\code{\link{fulldim}()},
+\code{\link{hasCoords}()},
+\code{\link{hasSets}()},
+\code{\link{is.temporal}()},
+\code{\link{isYear}()},
+\code{\link{ncells}()},
+\code{\link{ndim}()}
+}
 \author{
 Pascal Sauer, Patrick Rein
 }
+\concept{ObjectInfo}

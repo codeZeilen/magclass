@@ -31,7 +31,13 @@ complete_magpie(ani)
 }
 \seealso{
 \code{\link{addDim}},\code{\link{clean_magpie}}
+
+Other ObjectCreation: 
+\code{\link{clean_magpie}()},
+\code{\link{copy.attributes}()},
+\code{\link{new.magpie}()}
 }
 \author{
 Jan Philipp Dietrich, Benjamin Bodirsky
 }
+\concept{ObjectCreation}

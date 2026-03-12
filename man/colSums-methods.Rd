@@ -34,6 +34,12 @@ the sum or mean is over dimensions dims+1, ...; for col* it is over dimensions 1
 handle MAgPIE objects } }
 }
 
+\seealso{
+Other Aggregation: 
+\code{\link{dimSums}()},
+\code{\link{rowSums-methods}}
+}
+\concept{Aggregation}
 \keyword{keyword(s)}
 \keyword{methods}
 \keyword{other}

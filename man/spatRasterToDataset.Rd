@@ -15,6 +15,11 @@ SpatRasterDataset
 \description{
 Convert a SpatRaster to a SpatRasterDataset.
 }
+\seealso{
+Other SpatialOperations: 
+\code{\link{guessResolution}()}
+}
 \author{
 Pascal Sauer
 }
+\concept{SpatialOperations}

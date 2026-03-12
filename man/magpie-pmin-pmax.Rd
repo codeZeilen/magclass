@@ -34,4 +34,5 @@ object's dim. magclass pmin/pmax reorder items in each dim so they are in the sa
 \author{
 Pascal Sauer, Patrick Rein
 }
+\concept{Comparison}
 \keyword{methods}

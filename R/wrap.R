@@ -15,6 +15,7 @@
 #' under LGPL>=2.1 and written by Henrik Bengtsson.
 #' @author Henrik Bengtsson, Jan Philipp Dietrich
 #' @seealso \code{\link{unwrap}},\code{\link{fulldim}}
+#' @family MAgPIE-Conversions
 #' @export
 wrap <- function(x, map = list(NA), sep = ".") {
   if (!is.array(x) && !is.matrix(x))

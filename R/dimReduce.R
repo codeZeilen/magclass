@@ -31,6 +31,7 @@
 #' p[, , ] <- setCells(p[1, , ], "GLO")
 #' str(p)
 #' str(dimReduce(p))
+#' @family DimensionManipulation
 #' @export
 dimReduce <- function(x, dim_exclude = NULL) { # nolint: object_name_linter.
   x <- collapseDim(x)

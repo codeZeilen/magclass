@@ -23,6 +23,18 @@ is.temporal(1991:1993)
 is.spatial(c("GLO", "AFR"))
 
 }
+\seealso{
+Other ObjectInfo: 
+\code{\link{dimExists}()},
+\code{\link{fulldim}()},
+\code{\link{hasCoords}()},
+\code{\link{hasSets}()},
+\code{\link{isYear}()},
+\code{\link{ncells}()},
+\code{\link{ndim}()},
+\code{\link{sameDims}()}
+}
 \author{
 Jan Philipp Dietrich
 }
+\concept{ObjectInfo}

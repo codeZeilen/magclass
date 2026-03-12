@@ -20,6 +20,7 @@
 #' a <- as.magpie(1)
 #'  getCells(a)
 #'  setCells(a, "AFR")
+#' @family GetterSetter
 #' @export
 getCells <- function(x) {
   return(dimnames(x)[[1]])

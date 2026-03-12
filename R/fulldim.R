@@ -1,9 +1,10 @@
 #' Reconstructs full dimensionality of MAgPIE objects
 #'
+#' Deprecated: Use \code{\link{getItems}} instead.
+#'
 #' If a MAgPIE object is created from a source with more than one data
 #' dimension, these data dimensions are combined to a single dimension. fulldim
 #' reconstructs the original dimensionality and reports it.
-#'
 #'
 #' @param x A MAgPIE-object
 #' @param sep A character separating joined dimension names
@@ -11,6 +12,7 @@
 #' second element the dimnames output of the reconstructed array.
 #' @author Jan Philipp Dietrich
 #' @seealso \code{\link{as.magpie}},\code{\link{unwrap}},\code{\link{wrap}}
+#' @family ObjectInfo
 #' @export
 fulldim <- function(x, sep = ".") { # nolint: undesirable_function_linter.
   .Deprecated("getItems")

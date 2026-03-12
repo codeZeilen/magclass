@@ -23,6 +23,7 @@
 #' a <- new.magpie(1:10, 1995:2000)
 #' b <- new.magpie(c("AFR", "CPA"), "y1995", c("bla", "blub"), sets = c("i", "t", "value"))
 #' c <- new.magpie()
+#' @family ObjectCreation
 #' @export
 #' @importFrom methods new
 new.magpie <- function(cells_and_regions = "GLO", # nolint: object_name_linter.

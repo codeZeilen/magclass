@@ -43,7 +43,13 @@ time_interpolate(p, c("y1980", "y2000"), integrate = TRUE, extrapolation_type = 
 }
 \seealso{
 \code{\link{convergence}}
+
+Other TemporalOperations: 
+\code{\link{commonYears}()},
+\code{\link{convergence}()},
+\code{\link{lowpass}()}
 }
 \author{
 Benjamin Bodirsky, Jan Philipp Dietrich
 }
+\concept{TemporalOperations}

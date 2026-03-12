@@ -35,6 +35,7 @@
 #'
 #' @author Jan Philipp Dietrich, Stephen Bi, Florian Humpenoeder, Pascal Sauer
 #' @seealso \code{"\linkS4class{magpie}"}, \code{\link{write.magpie}}
+#' @family FileIO
 #' @export
 read.magpie <- function(file_name, file_folder = "", file_type = NULL, # nolint: object_name_linter, cyclocomp_linter.
                         as.array = FALSE, comment.char = "*", check.names = FALSE, ...) { # nolint: object_name_linter.

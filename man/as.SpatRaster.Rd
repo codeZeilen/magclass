@@ -30,7 +30,18 @@ if (requireNamespace("terra", quietly = TRUE)) {
 }
 \seealso{
 \code{\link{getCoords}}
+
+Other MAgPIE-Conversions: 
+\code{\link{as.RasterBrick}()},
+\code{\link{as.SpatRasterDataset}()},
+\code{\link{as.SpatVector}()},
+\code{\link{as.array-methods}},
+\code{\link{as.data.frame-methods}},
+\code{\link{as_tibble.magpie}()},
+\code{\link{unwrap}()},
+\code{\link{wrap}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{MAgPIE-Conversions}

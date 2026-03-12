@@ -34,7 +34,22 @@ setItems(x, "i", paste0("REG", 1:ncells(x)))
 }
 \seealso{
 \code{\link{getItems}}
+
+Other GetterSetter: 
+\code{\link{getCPR}()},
+\code{\link{getCells}()},
+\code{\link{getComment}()},
+\code{\link{getCoords}()},
+\code{\link{getDim}()},
+\code{\link{getItems}()},
+\code{\link{getNames}()},
+\code{\link{getRegionList}()},
+\code{\link{getRegions}()},
+\code{\link{getSets}()},
+\code{\link{getYears}()},
+\code{\link{setNames-methods}}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{GetterSetter}

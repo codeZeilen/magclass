@@ -34,7 +34,16 @@ each element (meaning that this data dimension contains exactly one element)
 \seealso{
 \code{\link{collapseDim}}, \code{\link{getItems}},
 \code{"\linkS4class{magpie}"}
+
+Other DimensionManipulation: 
+\code{\link{addDim}()},
+\code{\link{add_columns}()},
+\code{\link{collapseDim}()},
+\code{\link{dimCode}()},
+\code{\link{dimOrder}()},
+\code{\link{dimReduce}()}
 }
 \author{
 Jan Philipp Dietrich, David Klein, Xiaoxi Wang
 }
+\concept{DimensionManipulation}

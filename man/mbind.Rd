@@ -34,7 +34,15 @@ dim(a)
 }
 \seealso{
 \code{"\linkS4class{magpie}"}
+
+Other DataBinding: 
+\code{\link{cbind.magpie}()},
+\code{\link{extend}()},
+\code{\link{magpie_expand}()},
+\code{\link{magpiesort}()},
+\code{\link{matchDim}()}
 }
 \author{
 Jan Philipp Dietrich, Misko Stevanovic
 }
+\concept{DataBinding}

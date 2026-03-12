@@ -12,6 +12,7 @@
 #' hasSets(maxample("pop"))
 #' hasSets(maxample("animal"))
 #'
+#' @family ObjectInfo
 #' @export
 hasSets <- function(x) {
   return(!is.null(names(dimnames(x))))

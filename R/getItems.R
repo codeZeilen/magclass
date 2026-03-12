@@ -30,6 +30,7 @@
 #' getItems(x, "i")
 #' y <- x[, 1, ]
 #' getItems(y, "t") <- NULL
+#' @family GetterSetter
 #' @export
 getItems <- function(x, dim = NULL, split = FALSE, full = FALSE) { # nolint: cyclocomp_linter.
   if (is.null(dim)) dim <- 1:3

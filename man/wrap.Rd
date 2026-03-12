@@ -27,7 +27,18 @@ under LGPL>=2.1 and written by Henrik Bengtsson.
 }
 \seealso{
 \code{\link{unwrap}},\code{\link{fulldim}}
+
+Other MAgPIE-Conversions: 
+\code{\link{as.RasterBrick}()},
+\code{\link{as.SpatRaster}()},
+\code{\link{as.SpatRasterDataset}()},
+\code{\link{as.SpatVector}()},
+\code{\link{as.array-methods}},
+\code{\link{as.data.frame-methods}},
+\code{\link{as_tibble.magpie}()},
+\code{\link{unwrap}()}
 }
 \author{
 Henrik Bengtsson, Jan Philipp Dietrich
 }
+\concept{MAgPIE-Conversions}

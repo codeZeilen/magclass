@@ -81,6 +81,7 @@
 #'
 #' pop <- maxample("pop")
 #' mselect(pop, i = c("AFR", "EUR"), scenario = "A2", t = "y2035")
+#' @family SelectionCalculation
 #' @export
 mselect <- function(x, ..., collapseNames = FALSE) {
   m <- .mselectCoords(x, ...)

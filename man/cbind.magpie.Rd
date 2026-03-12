@@ -18,6 +18,15 @@ A matrix as if cbind was applied to the internal vector of the MAgPIE objects
 cbind method for MAgPIE-objects. Issues a warning that mbind should be used
 if all objects are magpie objects and continues afterwards.
 }
+\seealso{
+Other DataBinding: 
+\code{\link{extend}()},
+\code{\link{magpie_expand}()},
+\code{\link{magpiesort}()},
+\code{\link{matchDim}()},
+\code{\link{mbind}()}
+}
 \author{
 Patrick Rein
 }
+\concept{DataBinding}

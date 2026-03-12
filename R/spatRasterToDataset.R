@@ -5,6 +5,7 @@
 #' @param x SpatRaster with names of the form "y[0-9]+..[varname]"
 #' @return SpatRasterDataset
 #' @author Pascal Sauer
+#' @family SpatialOperations
 #' @export
 spatRasterToDataset <- function(x) {
   if (!requireNamespace("terra", quietly = TRUE)) {

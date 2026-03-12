@@ -35,6 +35,7 @@
 #' collapseDim(x, keepdim = 1:2)
 #' collapseDim(x, dim = 1.1)
 #' collapseDim(x, dim = 3.2)
+#' @family DimensionManipulation
 #' @export
 
 collapseDim <- function(x, dim = NULL, keepdim = NULL) {

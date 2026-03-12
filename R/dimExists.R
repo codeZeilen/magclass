@@ -14,6 +14,7 @@
 #' pop <- maxample("pop")
 #' dimExists(c("t", "scenario", "blablub"), pop)
 #'
+#' @family ObjectInfo
 #' @export
 dimExists <- function(dim, x, sep = ".") {
   if (is.null(dim)) {

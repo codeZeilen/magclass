@@ -18,6 +18,7 @@
 #'    r2 <- as.RasterBrick(m)
 #' }
 #' }
+#' @family MAgPIE-Conversions
 #' @export
 as.RasterBrick <- function(x, res = NULL) { # nolint: object_name_linter.
   if (!is.magpie(x)) stop("Input is not a magpie object")

@@ -16,6 +16,15 @@ mplot(px, global = TRUE, total = FALSE)
 \description{
 Get a quick visualization of the content of most magpie objects.
 }
+\seealso{
+Other Display: 
+\code{\link{head.magpie}()},
+\code{\link{maxample}()},
+\code{\link{print.magpie}()},
+\code{\link{show-methods}},
+\code{\link{str.magpie}()}
+}
 \author{
 Pascal Sauer, Patrick Rein
 }
+\concept{Display}

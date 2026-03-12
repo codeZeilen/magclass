@@ -16,6 +16,7 @@
 #' a <- maxample("animal")
 #' str(a)
 #' getItems(a, split = TRUE)
+#' @family Display
 #' @export
 maxample <- function(data) {
   if (!(data %in% c("pop", "animal", "bilateral"))) stop("Unknown data set \"", data, "\"!")

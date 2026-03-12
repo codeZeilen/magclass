@@ -36,6 +36,7 @@
 #' magpie_expand(b, a)
 #' options(magclass.verbosity = 2)
 #' magpie_expand(b, a)
+#' @family DataBinding
 #' @export
 magpie_expand <- function(x, ref) { # nolint: object_name_linter, cyclocomp_linter.
 

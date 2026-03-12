@@ -65,6 +65,7 @@
 #' read.report("report.csv")
 #' }
 #'
+#' @family FileIO
 #' @export
 #' @importFrom utils read.table
 #'

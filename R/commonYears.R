@@ -8,6 +8,7 @@
 #' @return The years (as returned by getYears) the input objects have in common.
 #'
 #' @author Pascal Sauer
+#' @family TemporalOperations
 #' @export
 commonYears <- function(..., asInteger = FALSE) {
   x <- list(...)

@@ -43,3 +43,4 @@ Write a magpie object to a netCDF file
 \author{
 Pascal Sauer
 }
+\keyword{internal}

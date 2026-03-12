@@ -18,6 +18,13 @@ The years (as returned by getYears) the input objects have in common.
 Given (a list of) magclass objects, return the years (getYears) they have in common,
 ignoring magclass objects with 0 or 1 years.
 }
+\seealso{
+Other TemporalOperations: 
+\code{\link{convergence}()},
+\code{\link{lowpass}()},
+\code{\link{time_interpolate}()}
+}
 \author{
 Pascal Sauer
 }
+\concept{TemporalOperations}

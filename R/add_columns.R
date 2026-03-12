@@ -16,6 +16,7 @@
 #' getItems(a2, dim = 3)
 #' getItems(a2, dim = 3, split = TRUE)
 #' head(a2[, , "magpie"])
+#' @family DimensionManipulation
 #' @export
 add_columns <- function(x, addnm = "new", dim = 3.1, fill = NA) { # nolint: object_name_linter.
   if (length(dim) != 1) stop("dim must be a single (sub)dimension!")

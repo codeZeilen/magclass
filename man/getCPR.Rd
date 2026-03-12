@@ -35,7 +35,22 @@ getCPR(a, dim = c("color", "species"))
 \seealso{
 \code{\link{getRegions}}, \code{\link{read.magpie}},
 \code{\link{write.magpie}}
+
+Other GetterSetter: 
+\code{\link{getCells}()},
+\code{\link{getComment}()},
+\code{\link{getCoords}()},
+\code{\link{getDim}()},
+\code{\link{getItems}()},
+\code{\link{getNames}()},
+\code{\link{getRegionList}()},
+\code{\link{getRegions}()},
+\code{\link{getSets}()},
+\code{\link{getYears}()},
+\code{\link{setItems}()},
+\code{\link{setNames-methods}}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{GetterSetter}

@@ -14,6 +14,7 @@
 #' a <- maxample("animal")
 #' dimSums(a, dim = c(1, 2, 3.2))
 #' dimSums(a, dim = c("x", "y", "cell", "month"))
+#' @family Aggregation
 #' @export
 dimSums <- function(x, dim = 3, na.rm = FALSE) { # nolint: object_name_linter.
   return(magpply(X = x, FUN = sum, DIM = dim, na.rm = na.rm))

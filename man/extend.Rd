@@ -24,6 +24,15 @@ Extend a magpie object to a dense grid based on the given xRange, yRange and res
 This is e.g. required when writing netCDF files. Extending a sparse magpie object to a dense grid
 requires much more memory, so use with caution.
 }
+\seealso{
+Other DataBinding: 
+\code{\link{cbind.magpie}()},
+\code{\link{magpie_expand}()},
+\code{\link{magpiesort}()},
+\code{\link{matchDim}()},
+\code{\link{mbind}()}
+}
 \author{
 Pascal Sauer
 }
+\concept{DataBinding}

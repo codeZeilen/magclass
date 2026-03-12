@@ -20,6 +20,7 @@
 #' head(pop)
 #'  tail(pop, 2, 4, 1)
 #'
+#' @family Display
 #' @importFrom utils head
 #' @export
 head.magpie <- function(x, n1 = 3L, n2 = 6L, n3 = 2L, ...) {

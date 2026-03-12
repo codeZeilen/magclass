@@ -14,6 +14,7 @@
 #' @examples
 #'
 #' # copy.magpie("bla.csv","blub.mz")
+#' @family FileIO
 #' @export
 copy.magpie <- function(input_file, output_file, round = NULL) { # nolint: object_name_linter.
   inType  <- tail(strsplit(input_file, "\\.")[[1]], 1)

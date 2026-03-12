@@ -46,7 +46,22 @@ a <- as.magpie(1)
 \code{\link{getRegions}}, \code{\link{getNames}},
 \code{\link{setNames}}, \code{\link{getCPR}}, \code{\link{read.magpie}},
 \code{\link{write.magpie}}, \code{"\linkS4class{magpie}"}
+
+Other GetterSetter: 
+\code{\link{getCPR}()},
+\code{\link{getComment}()},
+\code{\link{getCoords}()},
+\code{\link{getDim}()},
+\code{\link{getItems}()},
+\code{\link{getNames}()},
+\code{\link{getRegionList}()},
+\code{\link{getRegions}()},
+\code{\link{getSets}()},
+\code{\link{getYears}()},
+\code{\link{setItems}()},
+\code{\link{setNames-methods}}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{GetterSetter}

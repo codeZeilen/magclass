@@ -15,6 +15,7 @@
 #' @examples
 #' a <- maxample("animal")
 #' getCoords(a)
+#' @family GetterSetter
 #' @export
 getCoords <- function(x, xlab = "x", ylab = "y") {
   if (!hasCoords(x, xlab, ylab)) stop("No coordinates found in object!")

@@ -14,6 +14,7 @@
 #' hasCoords(maxample("pop"))
 #' hasCoords(maxample("animal"))
 #'
+#' @family ObjectInfo
 #' @export
 hasCoords <- function(x, xlab = "x", ylab = "y") {
   return(all(dimExists(c(xlab, ylab), x)))

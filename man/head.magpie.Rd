@@ -33,7 +33,15 @@ head(pop)
 }
 \seealso{
 \code{\link[utils]{head}}, \code{\link[utils]{tail}}
+
+Other Display: 
+\code{\link{maxample}()},
+\code{\link{mplot}()},
+\code{\link{print.magpie}()},
+\code{\link{show-methods}},
+\code{\link{str.magpie}()}
 }
 \author{
 Jan Philipp Dietrich
 }
+\concept{Display}

@@ -18,6 +18,7 @@
 #'
 #' @author Falk Benke
 #'
+#' @family DataBinding
 #' @export
 matchDim <- function(x, ref, dim = 1:3, fill = NA) {
 

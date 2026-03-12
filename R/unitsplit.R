@@ -5,6 +5,7 @@
 #' @param col column name. Default: variable
 #' @author Jan Philipp Dietrich, Mika Pflüger, Oliver Richters
 #'
+#' @family Utility
 #' @export
 unitsplit <- function(x, col = "variable") {
   # structure of this regex (flavor: PCRE2):

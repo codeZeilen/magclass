@@ -37,6 +37,7 @@
 #' getSets(x)[4] <- "ble"
 #' getNames(x, dim = "ble") <- c("Hi", "Bye")
 #' x
+#' @family GetterSetter
 #' @export
 getNames <- function(x, fulldim = FALSE, dim = NULL) {
   return(getItems(x, dim = .convertDim(dim), split = fulldim)) # nolint: undesirable_function_linter.
