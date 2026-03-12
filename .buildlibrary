@@ -6,7 +6,7 @@ AcceptedWarnings:
 AcceptedNotes: unable to verify current time
 AutocreateReadme: yes
 allowLinterWarnings: no
-enforceVersionUpdate: no
+enforceVersionUpdate: yes
 AutocreateCITATION: yes
 skipCoverage: no
 UsePkgDown: yes
