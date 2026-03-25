@@ -2,7 +2,7 @@
 #' @importFrom data.table as.data.table tstrsplit melt
 
 #' @exportMethod as.magpie
-setGeneric("as.magpie", function(x, ...) standardGeneric("as.magpie"))
+setGeneric("as.magpie", function(x, ...) standardGeneric("as.magpie")) # nolint: object_name_linter
 
 setMethod("as.magpie", signature(x = "magpie"), function(x) return(x))
 
@@ -378,9 +378,12 @@ setMethod("as.magpie",
     idVars <- "id"
   }
 
-  df <- as.data.table(df)
+  setDT(df) # No copy is made, df is changed in-place to data.tabe
   df <- melt(df, id.vars = idVars)
-  variable <- as.data.table(tstrsplit(df$variable, "..", fixed = TRUE))
+
+  # We first only work on a sample to determine the proper
+  # variable names. Then we do the variable transformation in-place.
+  variable <- data.frame(tstrsplit(df$variable[1], "..", fixed = TRUE))
   if (!is.null(temporal)) temporal <- temporal + length(idVars)
   if (ncol(variable) == 1) {
     if (all(grepl("^[yX][0-9]*$", variable[[1]], perl = TRUE))) {
@@ -396,9 +399,14 @@ setMethod("as.magpie",
   } else {
     stop("Reserved dimension separator \"..\" occurred more than once in layer names! Cannot convert raster object")
   }
-  df <- as.data.frame(df)
-  baseDims <- which(!(colnames(df) %in% c("variable", "value")))
-  df <- cbind(df[, baseDims, drop = FALSE], variable, df[, "value", drop = FALSE])
+
+  # Now, we actually transform the variable columns
+  df[, names(variable) := tstrsplit(df$variable, "..", fixed = TRUE)]
+  df[, variable := NULL] # variable column is not needed anymore
+
+  baseDims <- colnames(df)[!(colnames(df) %in% c("value", names(variable)))]
+  setcolorder(df, neworder = c(baseDims, names(variable), "value"))
+  setDF(df)
   out <- tidy2magpie(df, spatial = idVars, temporal = temporal)
   if (!is.null(geometry)) {
     names(geometry) <- getItems(out, dim = 1)
