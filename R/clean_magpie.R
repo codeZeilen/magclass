@@ -47,13 +47,13 @@ clean_magpie <- function(x, what = "all", maindim = 1:3) { # nolint: object_name
   }
   # make sure that all dimensions have names
   if ("sets" %in% what) {
+    dn <- dimnames(x)
+    if (is.null(names(dn))) names(dn) <- rep(NA, 3)
 
-    if (is.null(names(dimnames(x)))) names(dimnames(x)) <- rep(NA, 3)
-
-    .countSubdim <- function(x, sep = "\\.") {
-      o <- nchar(gsub(paste0("[^", sep, "]*"), "", x)) + 1
-      if (length(o) == 0) o <- 0
-      return(o)
+    # counts dots via codepoint comparison; much cheaper than a regex for these short strings
+    .countSubdim <- function(x) {
+      if (length(x) == 0) return(0)
+      sum(utf8ToInt(x) == utf8ToInt(".")) + 1L
     }
 
     .fixNames <- function(names, ndim, key = "data") {
@@ -75,13 +75,13 @@ clean_magpie <- function(x, what = "all", maindim = 1:3) { # nolint: object_name
       return(names)
     }
 
-    names <- names(dimnames(x))
+    names <- names(dn)
     keys <- c("region", "year", "data")
 
     for (i in maindim) {
-      names[i] <- .fixNames(names[i], ndim = .countSubdim(dimnames(x)[[i]][1]), key = keys[i])
+      names[i] <- .fixNames(names[i], ndim = .countSubdim(dn[[i]][1]), key = keys[i])
     }
-    if (!identical(names, names(dimnames(x)))) names(dimnames(x)) <- names
+    names(dimnames(x)) <- names
   }
 
   if ("items" %in% what) {

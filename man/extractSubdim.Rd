@@ -4,10 +4,10 @@
 \alias{extractSubdim}
 \title{extractSubdim}
 \usage{
-extractSubdim(x, subdim = 1L)
+extractSubdim(dimNames, subdim = 1L)
 }
 \arguments{
-\item{x}{A character vector of dot-separated dimnames.}
+\item{dimNames}{A character vector of dot-separated dimNames.}
 
 \item{subdim}{The subdimension to extract (1-based).}
 }
@@ -15,7 +15,7 @@ extractSubdim(x, subdim = 1L)
 A character vector with the requested subdimension.
 }
 \description{
-Extracts the given dot-separated subdimension from a vector of dimnames. Elements with
+Extracts the given dot-separated subdimension from a vector of dimNames. Elements with
 fewer subdimensions than requested are returned unchanged, matching the behavior of the
 regex this function replaces.
 }
