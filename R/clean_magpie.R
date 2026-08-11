@@ -28,10 +28,22 @@ clean_magpie <- function(x, what = "all", maindim = 1:3) { # nolint: object_name
   if (any(!is.element(what, availableTypes))) stop('Unknown setting for argument what ("', what, '")!')
 
   # remove cell numbers if data is actually regional
-  if (is.element("cells", what) && ncells(x) == nregions(x)) {
-    items <- getItems(x, dim = 1.1, full = TRUE)
-    names(items) <- NULL
-    if (!is.null(items)) getItems(x, dim = 1) <- items
+  if ("cells" %in% what) {
+    cells <- dimnames(x)[[1]]
+    if (!is.null(cells)) {
+      hasSubdims <- grepl(".", cells[1], fixed = TRUE)
+      # nothing to remove unless there are subdimensions or stray element names
+      if (hasSubdims || !is.null(names(cells))) {
+        regions <- if (hasSubdims) extractSubdim(cells) else cells
+        if (!anyDuplicated(regions)) {          # equivalent to ncells(x) == nregions(x)
+          names(regions) <- NULL
+          dimnames(x)[[1]] <- regions
+          if (hasSubdims && !is.null(names(dimnames(x)))) {
+            names(dimnames(x))[1] <- extractSubdim(names(dimnames(x))[1])
+          }
+        }
+      }
+    }
   }
   # make sure that all dimensions have names
   if ("sets" %in% what) {
@@ -69,16 +81,23 @@ clean_magpie <- function(x, what = "all", maindim = 1:3) { # nolint: object_name
     for (i in maindim) {
       names[i] <- .fixNames(names[i], ndim = .countSubdim(dimnames(x)[[i]][1]), key = keys[i])
     }
-    names(dimnames(x)) <- names
+    if (!identical(names, names(dimnames(x)))) names(dimnames(x)) <- names
   }
 
   if ("items" %in% what) {
     .fixEmptySubims <- function(x, dim) {
-      if (is.null(dimnames(x)[[dim]])) return(x)
-      pattern <- "(^|\\.)(\\.|$)"
-      while (any(grepl(pattern, dimnames(x)[[dim]]))) {
-        dimnames(x)[[dim]] <- gsub(pattern, "\\1 \\2", dimnames(x)[[dim]], perl = TRUE)
+      items <- dimnames(x)[[dim]]
+      if (is.null(items)) return(x)
+      # cheap fixed-string pre-check; the regex below is considerably more expensive
+      if (!(any(!nzchar(items), na.rm = TRUE) || any(startsWith(items, "."), na.rm = TRUE) ||
+              any(endsWith(items, "."), na.rm = TRUE) || any(grepl("..", items, fixed = TRUE), na.rm = TRUE))) {
+        return(x)
       }
+      pattern <- "(^|\\.)(\\.|$)"
+      while (any(grepl(pattern, items))) {
+        items <- gsub(pattern, "\\1 \\2", items, perl = TRUE)
+      }
+      dimnames(x)[[dim]] <- items
       return(x)
     }
     for (i in maindim) {

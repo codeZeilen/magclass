@@ -69,8 +69,7 @@ getItems <- function(x, dim = NULL, split = FALSE, full = FALSE) { # nolint: cyc
   tmp <- dimnames(x)[[as.integer(dim)]]
   if (is.null(tmp)) return(NULL)
   subdim <- as.integer(substring(dim, 3))
-  reg <- paste0(rep("([^\\.]*)", subdim), collapse = "\\.")
-  out <- sub(paste0("^", reg, ".*$"), paste0("\\", subdim), tmp)
+  out <- extractSubdim(tmp, subdim)
   if (isTRUE(full)) return(out)
   return(unique(out))
 }
