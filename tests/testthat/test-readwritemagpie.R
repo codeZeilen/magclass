@@ -126,6 +126,36 @@ test_that("handling of spatial data works", {
   expect_identical(as.vector(animalRaster$dim$lat$vals), seq(54, 49, -0.25))
 })
 
+test_that("reading externally created nc without crs works", {
+  skip_if_not_installed("ncdf4")
+  skip_if_not_installed("terra", minimum_version = "1.9.46")
+  td <- withr::local_tempdir()
+  f <- file.path(td, "nocrs.nc")
+
+  # written with ncdf4, not write.magpie: bare CF lon/lat axes, no grid_mapping/crs.
+  # regression test for terra 1.9-34..1.9-45, which guessed (and warned about) the
+  # crs on this kind of file instead of deriving it from the lon/lat units
+  lonv <- seq(-2.75, 2.75, by = 0.5)
+  latv <- seq(-1.75, 1.75, by = 0.5)
+  lon <- ncdf4::ncdim_def("lon", "degrees_east", lonv)
+  lat <- ncdf4::ncdim_def("lat", "degrees_north", latv)
+  v   <- ncdf4::ncvar_def("v", "1", list(lon, lat), -9999, prec = "float")
+  arr <- array(seq_len(length(lonv) * length(latv)), c(length(lonv), length(latv)))
+  nc <- ncdf4::nc_create(f, v)
+  ncdf4::ncvar_put(nc, v, arr)
+  ncdf4::nc_close(nc)
+
+  expect_no_warning(m <- read.magpie(f))
+
+  co <- getCoords(m)
+  expect_identical(sort(unique(co$x)), lonv)
+  expect_identical(sort(unique(co$y)), latv)
+
+  # values must land on the coordinates they were written to
+  expect_identical(as.numeric(m),
+                   as.numeric(arr[cbind(match(co$x, lonv), match(co$y, latv))]))
+})
+
 
 test_that("read/write conserves cell naming", {
   p <- new.magpie(c("AFR.2", "CPA.3", "AFR.1", "CPA.4"), fill = 0)

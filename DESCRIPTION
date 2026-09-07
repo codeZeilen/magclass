@@ -70,7 +70,7 @@ Suggests:
     quitte,
     raster,
     rmarkdown,
-    terra,
+    terra (>= 1.9.46),
     testthat (>= 3.1.5),
     tibble,
     withr
